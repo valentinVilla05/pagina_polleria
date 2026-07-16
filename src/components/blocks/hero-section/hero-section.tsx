@@ -92,7 +92,7 @@ const HeroSection = ({ menudata }: { menudata: MenuData[] }) => {
         {/* Hero Header */}
         <div className='grid grid-cols-1 gap-6 gap-y-12 md:gap-y-16 lg:grid-cols-5'>
           <div className='flex w-full flex-col justify-center gap-5 max-lg:items-center lg:col-span-3 lg:h-95.5'>
-            <h1 className='text-3xl leading-[1.29167] font-semibold text-balance max-lg:text-center sm:text-4xl lg:text-5xl'>
+            <h1 className='lg:text-7.5xl text-3xl leading-[1.29167] font-semibold text-balance max-lg:text-center sm:text-9xl'>
               Asadero Ronda
             </h1>
 
@@ -107,7 +107,7 @@ const HeroSection = ({ menudata }: { menudata: MenuData[] }) => {
                 className='group relative w-fit overflow-hidden rounded-full text-base before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.5)_50%,transparent_75%,transparent_100%)] before:bg-[length:250%_250%,100%_100%] before:bg-[position:200%_0,0_0] before:bg-no-repeat before:transition-[background-position_0s_ease] before:duration-1000 hover:before:bg-[position:-100%_0,0_0] has-[>svg]:px-6 dark:before:bg-[linear-gradient(45deg,transparent_25%,rgba(0,0,0,0.2)_50%,transparent_75%,transparent_100%)]'
               >
                 <a href='#'>
-                  Order now
+                  Pide ahora
                   <ArrowRightIcon className='transition-transform duration-200 group-hover:translate-x-0.5' />
                 </a>
               </Button>
