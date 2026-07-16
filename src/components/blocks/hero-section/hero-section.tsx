@@ -166,29 +166,6 @@ const HeroSection = ({ menudata }: { menudata: MenuData[] }) => {
               ))}
             </CarouselContent>
           </Carousel>
-          <Carousel
-            className='flex w-full items-center justify-center lg:col-span-2'
-            setApi={setCommentsApi}
-            opts={{
-              loop: true
-            }}
-          >
-            <CarouselContent>
-              {menudata.map(item => (
-                <CarouselItem
-                  key={item.id}
-                  className='flex h-full min-h-14 w-full items-center justify-center gap-4 px-6'
-                >
-                  <img src={item.userAvatar} alt={item.imgAlt} className='size-10 rounded-full' />
-                  <Separator
-                    orientation='vertical'
-                    className='bg-primary hidden h-6! w-0.5! rounded-full! data-vertical:self-center sm:block'
-                  />
-                  <p className='text-card-foreground'>{item.userComment}</p>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
         </div>
       </div>
     </section>

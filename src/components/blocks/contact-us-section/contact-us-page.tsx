@@ -8,7 +8,10 @@ type ContactInfo = {
   title: string
   icon: ComponentType
   description: string
+  link?: string
 }[]
+
+const CLICKABLE_TITLES = ['Encuéntranos', 'WhatsApp']
 
 const ContactUs = ({ contactInfo }: { contactInfo: ContactInfo }) => {
   return (
@@ -44,28 +47,43 @@ const ContactUs = ({ contactInfo }: { contactInfo: ContactInfo }) => {
 
             {/* Contact Info Grid */}
             <div className='grid gap-6 sm:grid-cols-2'>
-              {contactInfo.map((info, index) => (
-                <Card
-                  className='bg-background hover:border-primary rounded-none border shadow-none ring-0 transition-colors duration-300'
-                  key={index}
-                >
-                  <CardContent className='flex flex-col items-center gap-4 text-center'>
-                    <Avatar className='size-9'>
-                      <AvatarFallback className='bg-transparent [&>svg]:size-5'>
-                        <info.icon />
-                      </AvatarFallback>
-                    </Avatar>
-                    <div className='space-y-3'>
-                      <h4 className='text-lg font-semibold'>{info.title}</h4>
-                      <div className='text-muted-foreground text-base font-medium'>
-                        {info.description.split('\n').map((line, idx) => (
-                          <p key={idx}>{line}</p>
-                        ))}
+              {contactInfo.map((info, index) => {
+                const isClickable = !!info.link
+
+                const cardContent = (
+                  <Card
+                    className={`bg-background rounded-none border shadow-none ring-0 transition-colors duration-300 ${
+                      isClickable ? 'hover:border-primary cursor-pointer' : ''
+                    }`}
+                  >
+                    <CardContent className='flex flex-col items-center gap-4 text-center'>
+                      <Avatar className='size-9'>
+                        <AvatarFallback className='bg-transparent [&>svg]:size-5'>
+                          <info.icon />
+                        </AvatarFallback>
+                      </Avatar>
+                      <div className='space-y-3'>
+                        <h4 className='text-lg font-semibold'>{info.title}</h4>
+                        <div className='text-muted-foreground text-base font-medium'>
+                          {info.description.split('\n').map((line, idx) => (
+                            <p key={idx}>{line}</p>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+                    </CardContent>
+                  </Card>
+                )
+
+                if (isClickable) {
+                  return (
+                    <a key={index} href={info.link} target='_blank' rel='noopener noreferrer'>
+                      {cardContent}
+                    </a>
+                  )
+                }
+
+                return <div key={index}>{cardContent}</div>
+              })}
             </div>
           </div>
         </div>
