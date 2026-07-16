@@ -2,7 +2,7 @@ import { Clock8Icon, MapPinIcon, Mail, PhoneIcon } from 'lucide-react'
 
 export const contactInfo = [
   {
-    title: 'Open Hours',
+    title: 'Horario',
     icon: Clock8Icon,
     description: 'Monday-Friday\n8:00 am to 5:00 pm'
   },

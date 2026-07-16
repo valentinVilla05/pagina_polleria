@@ -20,12 +20,11 @@ const ContactUs = ({ contactInfo }: { contactInfo: ContactInfo }) => {
         {/* Header */}
         <div className='mx-auto mb-12 flex max-w-2xl flex-col items-center justify-center space-y-4 text-center sm:mb-16 lg:mb-24'>
           <Badge variant='outline' className='h-auto text-sm font-normal'>
-            Contact Us
+            Contacto
           </Badge>
-          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Get in touch with us </h2>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Contáctanos </h2>
           <p className='text-muted-foreground text-xl'>
-            We eagerly look forward to warmly welcoming you very soon to our event. It promises to be a memorable
-            experience filled with exciting activities.
+            ¡Contáctanos y recibe tu pedido sin filas y sin tener que esperar!
           </p>
         </div>
 
@@ -38,10 +37,9 @@ const ContactUs = ({ contactInfo }: { contactInfo: ContactInfo }) => {
           />
 
           <div>
-            <h3 className='mb-2 text-2xl'>We&apos;re here to serve you</h3>
+            <h3 className='mb-2 text-2xl'>Estamos para atenderte</h3>
             <p className='text-muted-foreground mb-10 text-lg'>
-              We would love to hear from you, Whether you have a question, need a reservation, or want to learn more
-              about our offerings, we&apos;re here to assist.
+              Si te gustó nuestros servicios, no dudes en ponernos una valoración positiva en Google Maps.
             </p>
 
             {/* Contact Info Grid */}
