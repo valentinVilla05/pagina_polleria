@@ -1,4 +1,4 @@
-export const popularDishes = [
+export const dishes = [
   {
     image:
       'https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmb1xnCZfqUg0F5f6ASmsHIBpjiDjzcO_DnoYaC-BG6m0gGZUuGkCe1tvVBq3Wy6BmR-46923lDCjCSdntv8w-RQtkRIofqVnBAQBbdKmdlq8fVhsZOn4xYLpxZcQO6kT2C27LRI9vzmFU=w181-h236-p-k-no',

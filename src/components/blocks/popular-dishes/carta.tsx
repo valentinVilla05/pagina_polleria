@@ -2,7 +2,7 @@ import { Card, CardContent, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import { Badge } from '@/components/ui/badge'
 
-type PopularDish = {
+type Dish = {
   image: string
   alt: string
   name: string
@@ -10,7 +10,7 @@ type PopularDish = {
   description: string
 }[]
 
-const PopularDishes = ({ popularDishes }: { popularDishes: PopularDish }) => {
+const Dishes = ({ dishes }: { dishes: Dish }) => {
   return (
     <section id='popular-dishes' className='py-8 sm:py-16 lg:py-24'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
@@ -18,13 +18,15 @@ const PopularDishes = ({ popularDishes }: { popularDishes: PopularDish }) => {
           <Badge variant='outline' className='h-auto text-sm font-normal'>
             Nuestra carta
           </Badge>
-          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Recomendaciones de la Casa </h2>
-          <p className='text-muted-foreground text-xl'>¡Descubre nuestros menús de!</p>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Carta completa</h2>
+          <p className='text-muted-foreground text-xl'>
+            Explora nuestra variedad de platos para disfrutar solo o en compañia!
+          </p>
         </div>
 
         {/* Dishes */}
         <div className='grid gap-6 md:grid-cols-2 lg:gap-y-10 xl:grid-cols-4'>
-          {popularDishes.map((member, index) => (
+          {dishes.map((member, index) => (
             <Card
               key={index}
               className='hover:border-primary border-primary/10 overflow-hidden rounded-none border py-0 shadow-none ring-0 transition-colors duration-300'
@@ -50,4 +52,4 @@ const PopularDishes = ({ popularDishes }: { popularDishes: PopularDish }) => {
   )
 }
 
-export default PopularDishes
+export default Dishes
