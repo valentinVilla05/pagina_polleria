@@ -2,6 +2,12 @@ import { Clock8Icon, MapPinIcon, Mail, PhoneIcon } from 'lucide-react'
 
 export const contactInfo = [
   {
+    title: 'WhatsApp',
+    icon: PhoneIcon,
+    description: '+34 642 65 36 04',
+    link: 'https://api.whatsapp.com/send/?phone=34642653604&text=Hola%2C+quiero+hacer+un+pedido&type=phone_number&app_absent=0'
+  },
+  {
     title: 'Horario',
     icon: Clock8Icon,
     description: 'De martes a domingo\n10:00 am a 5:00 pm'
@@ -17,11 +23,5 @@ export const contactInfo = [
     icon: Mail,
     description: 'info@seliziakitchen.com',
     link: 'mailto:info@seliziakitchen.com' // opcional, si también quieres que Email sea clicable
-  },
-  {
-    title: 'WhatsApp',
-    icon: PhoneIcon,
-    description: '+34 642 65 36 04',
-    link: 'https://api.whatsapp.com/send/?phone=34642653604&text=Hola%2C+quiero+hacer+un+pedido&type=phone_number&app_absent=0'
   }
 ]
