@@ -1,11 +1,13 @@
 import type { ComponentType } from 'react'
-import { ArrowRightIcon } from 'lucide-react'
 
+/*
+import { ArrowRightIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+*/
 type Stat = {
   icon: ComponentType
-  value: string
+  description: string[]
 }
 
 const AboutUs = ({ stats }: { stats: Stat[] }) => {
@@ -34,9 +36,8 @@ const AboutUs = ({ stats }: { stats: Stat[] }) => {
                 <div className='flex size-7 items-center justify-center [&>svg]:size-7'>
                   <stat.icon />
                 </div>
-                <span className='text-2xl font-semibold'>{stat.value}</span>
                 <p className='text-muted-foreground text-lg'>
-                  {stat.description[0]} <br /> {stat.description[1]}
+                  {stat.description[0]} <br />
                 </p>
               </div>
             ))}
