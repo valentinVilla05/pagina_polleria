@@ -16,10 +16,19 @@ const PopularDishes = ({ popularDishes }: { popularDishes: PopularDish }) => {
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='mx-auto mb-12 flex max-w-2xl flex-col items-center justify-center space-y-4 text-center sm:mb-16 lg:mb-24'>
           <Badge variant='outline' className='h-auto text-sm font-normal'>
+<<<<<<< Updated upstream
             Nuestra carta
           </Badge>
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Recomendaciones de la casa</h2>
           <p className='text-muted-foreground text-xl'>¡Descubre nuestros platos recomendados!</p>
+=======
+            Especiales de la casa
+          </Badge>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Menús estrella</h2>
+          <p className='text-muted-foreground text-xl'>
+            Prueba nuestros menús de pollo a la brasa más jugosos y deliciosos.
+          </p>
+>>>>>>> Stashed changes
         </div>
 
         {/* Dishes */}
