@@ -1,8 +1,10 @@
 'use client'
 import { Card, CardContent, CardTitle } from '@/components/ui/card'
+import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
+
 import { Separator } from '@/components/ui/separator'
 import { Badge } from '@/components/ui/badge'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 type Dish = {
   image: string
@@ -14,11 +16,32 @@ type Dish = {
 
 const Dishes = ({ dishes }: { dishes: Dish }) => {
   const [pagina, setPagina] = useState(0) // Estado para la pagina actual
-  const PAGE_SIZE = 4 // Numero de cards por pagina
 
-  const ultima_pagina = Math.max(0, Math.ceil(dishes.length / PAGE_SIZE) - 1)
-  const indice_incio = pagina * PAGE_SIZE
-  const platos_visibles = dishes.slice(indice_incio, indice_incio + PAGE_SIZE)
+  const [tamanoPagina, setTamanoPagina] = useState(() => {
+    if (typeof window === 'undefined') return 4
+    if (window.innerWidth >= 1280) return 4
+    if (window.innerWidth >= 768) return 2
+
+    return 1
+  })
+
+  useEffect(() => {
+    const actualizarTamanoPagina = () => {
+      const nuevoTamano = window.innerWidth >= 1280 ? 4 : window.innerWidth >= 768 ? 2 : 1
+
+      setTamanoPagina(nuevoTamano)
+      setPagina(0)
+    }
+
+    actualizarTamanoPagina()
+    window.addEventListener('resize', actualizarTamanoPagina)
+
+    return () => window.removeEventListener('resize', actualizarTamanoPagina)
+  }, [])
+
+  const ultima_pagina = Math.max(0, Math.ceil(dishes.length / tamanoPagina) - 1)
+  const indice_incio = pagina * tamanoPagina
+  const platos_visibles = dishes.slice(indice_incio, indice_incio + tamanoPagina)
 
   const retroceder = () => setPagina(current => Math.max(0, current - 1))
   const avanzar = () => setPagina(current => Math.min(ultima_pagina, current + 1))
@@ -38,10 +61,15 @@ const Dishes = ({ dishes }: { dishes: Dish }) => {
 
         {/* Dishes */}
         <div className='flex items-center justify-center gap-6'>
-          <button onClick={retroceder} disabled={pagina == 0}>
-            Atras
+          <button
+            onClick={retroceder}
+            disabled={pagina == 0}
+            aria-label='Página anterior'
+            className='hover:bg-muted rounded-full border p-2 transition disabled:cursor-not-allowed disabled:opacity-50'
+          >
+            <SlArrowLeft className='h-4 w-4' />
           </button>
-          <div className='grid gap-6 md:grid-cols-2 lg:gap-y-10 xl:grid-cols-4'>
+          <div className='grid w-full max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4'>
             {platos_visibles.map((member, index) => (
               <Card
                 key={index}
@@ -63,8 +91,13 @@ const Dishes = ({ dishes }: { dishes: Dish }) => {
               </Card>
             ))}
           </div>
-          <button onClick={avanzar} disabled={pagina == ultima_pagina}>
-            Adelante
+          <button
+            onClick={avanzar}
+            disabled={pagina == ultima_pagina}
+            aria-label='Página siguiente'
+            className='hover:bg-muted rounded-full border p-2 transition disabled:cursor-not-allowed disabled:opacity-50'
+          >
+            <SlArrowRight className='h-4 w-4' />
           </button>
         </div>
       </div>
