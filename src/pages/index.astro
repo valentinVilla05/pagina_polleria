@@ -11,8 +11,12 @@ import ContactUs from '@/components/blocks/contact-us-section/contact-us-page'
 import Offers from '@/components/blocks/offers-section/offers-section'
 
 import { menudata } from '@/assets/data/hero'
-import { dishes_ensaladas } from '@/assets/data/dishes'
+import { dishes_ensaladas } from '@/assets/data/ensaladas'
+import { dishes_fritos } from '@/assets/data/fritos'
 import { popularDishes } from '@/assets/data/popular-dishes'
+import { dishes_platos_caseros } from '@/assets/data/platos_caseros'
+import { dishes_extras } from '@/assets/data/extras'
+import { dishes_postres } from '@/assets/data/postres'
 import { stats } from '@/assets/data/about-us'
 
 // import { testimonials } from '@/assets/data/testimonials'
@@ -49,7 +53,11 @@ const schema = {
 <Layout title={pageTitle} description={pageDescription} keywords={pageKeywords} schema={schema}>
   <HeroSectionPage menudata={menudata} client:load />
   <PopularDishes popularDishes={popularDishes} client:load />
-  <Dishes dishes={dishes_ensaladas} client:load />
+  <Dishes dishes={dishes_ensaladas} titulo='Ensaladas' client:load />
+  <Dishes dishes={dishes_fritos} titulo='Fritos' client:load />
+  <Dishes dishes={dishes_platos_caseros} titulo='Platos caseros' client:load />
+  <Dishes dishes={dishes_extras} titulo='Extras' client:load />
+  <Dishes dishes={dishes_postres} titulo='Postres' client:load />
   <AboutUs stats={stats} />
   <ContactUs contactInfo={contactInfo} />
   <Offers galleryImage={GalleryImage} />

@@ -3,7 +3,6 @@ import { Card, CardContent, CardTitle } from '@/components/ui/card'
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
 
 import { Separator } from '@/components/ui/separator'
-import { Badge } from '@/components/ui/badge'
 import { useEffect, useState } from 'react'
 
 type Dish = {
@@ -14,7 +13,7 @@ type Dish = {
   description: string
 }[]
 
-const Dishes = ({ dishes }: { dishes: Dish }) => {
+const Dishes = ({ dishes, titulo }: { dishes: Dish; titulo: string }) => {
   const [pagina, setPagina] = useState(0) // Estado para la pagina actual
 
   const [tamanoPagina, setTamanoPagina] = useState(() => {
@@ -50,13 +49,12 @@ const Dishes = ({ dishes }: { dishes: Dish }) => {
     <section id='popular-dishes' className='py-8 sm:py-16 lg:py-24'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='mx-auto mb-12 flex max-w-2xl flex-col items-center justify-center space-y-4 text-center sm:mb-16 lg:mb-24'>
-          <Badge variant='outline' className='h-auto text-sm font-normal'>
-            Nuestra carta
-          </Badge>
-          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Carta completa</h2>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>{titulo}</h2>
+          {/*
           <p className='text-muted-foreground text-xl'>
-            Explora nuestra variedad de platos para disfrutar solo o en compañia!
+            Explora nuestra variedad de {comida} para disfrutar solo o en compañia!
           </p>
+          */}
         </div>
 
         {/* Dishes */}
