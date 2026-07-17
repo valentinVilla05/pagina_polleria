@@ -11,7 +11,7 @@ import ContactUs from '@/components/blocks/contact-us-section/contact-us-page'
 import Offers from '@/components/blocks/offers-section/offers-section'
 
 import { menudata } from '@/assets/data/hero'
-import { dishes } from '@/assets/data/dishes'
+import { dishes_ensaladas } from '@/assets/data/dishes'
 import { popularDishes } from '@/assets/data/popular-dishes'
 import { stats } from '@/assets/data/about-us'
 
@@ -49,7 +49,7 @@ const schema = {
 <Layout title={pageTitle} description={pageDescription} keywords={pageKeywords} schema={schema}>
   <HeroSectionPage menudata={menudata} client:load />
   <PopularDishes popularDishes={popularDishes} client:load />
-  <Dishes dishes={dishes} client:load />
+  <Dishes dishes={dishes_ensaladas} client:load />
   <AboutUs stats={stats} />
   <ContactUs contactInfo={contactInfo} />
   <Offers galleryImage={GalleryImage} />
