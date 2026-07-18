@@ -52,7 +52,9 @@ const MenusSemanales = ({ menu }: { menu: menuDelDia }) => {
 
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>¡Prueba nuestro menú de hoy!</h2>
 
-          <p className='text-muted-foreground text-xl'>Menú del dia con 2º plato a elegir. Incluye pan y postre.</p>
+          <p className='text-muted-foreground text-xl'>
+            Menú del dia con 2º plato a elegir. Incluye pan y postre. (Entre semana 11.50€ / Fin de semana 12.50€)
+          </p>
         </div>
 
         {/* Gallery Grid */}
