@@ -1,43 +1,97 @@
-export const GalleryImage = [
+export const menusSemanales = [
   {
     src: '/images/offers/offers-image-01.webp',
-    alt: 'Launch deal',
+    alt: 'Menú del martes',
+    dia: 2,
     className: 'col-span-2 row-span-2',
     offerText: {
-      text: 'Lunch Deal - $9.99',
+      text: 'Menú del martes',
+      description: 'Macarrones',
       className: 'xl:top-6 xl:right-6 top-3 right-3'
     },
     offerButton: {
-      text: 'Book your table',
-      link: '#',
+      text: 'Pidelo ahora',
+      href: '#contact-us',
       className: 'xl:top-19.5 xl:right-6 top-12 right-3'
     }
   },
   {
     src: '/images/offers/offers-image-02.webp',
-    alt: 'Bogo special',
+    alt: 'Menú de miercoles',
+    dia: 3,
     className: 'col-span-2 max-h-60',
     offerText: {
-      text: 'BOGO Special',
+      text: 'Menú de miercoles',
+      description: 'Cocido',
       className: 'xl:bottom-18.5 xl:left-4 bottom-13 left-3'
     },
     offerButton: {
       text: 'Claim offer',
-      link: '#',
+      href: '#contact-us',
       className: 'xl:bottom-5 xl:left-4 bottom-2 left-3'
     }
   },
   {
     src: '/images/offers/offers-image-03.webp',
-    alt: 'Family meal',
+    alt: 'Menú de Jueves',
+    dia: 4,
     className: 'col-span-2 max-h-60',
     offerText: {
-      text: 'Family Meal – $29.99',
+      text: 'Menú de Jueves',
+      description: 'Lentejas',
       className: 'xl:top-5 xl:right-12 top-3 right-3'
     },
     offerButton: {
-      text: 'Book your table',
-      link: '#',
+      text: 'Pidelo ahora',
+      href: '#contact-us',
+      className: 'xl:top-19 xl:right-12 top-11 right-3'
+    }
+  },
+  {
+    src: '/images/offers/offers-image-03.webp',
+    alt: 'Menú de Viernes',
+    dia: 5,
+    className: 'col-span-2 max-h-60',
+    offerText: {
+      text: 'Menú de Viernes',
+      description: 'Fideuá',
+      className: 'xl:top-5 xl:right-12 top-3 right-3'
+    },
+    offerButton: {
+      text: 'Pidelo ahora',
+      href: '#contact-us',
+      className: 'xl:top-19 xl:right-12 top-11 right-3'
+    }
+  },
+  {
+    src: '/images/offers/offers-image-03.webp',
+    alt: 'Menú de Sabado',
+    dia: 6,
+    className: 'col-span-2 max-h-60',
+    offerText: {
+      text: 'Menú de Sabado',
+      description: 'Paella',
+      className: 'xl:top-5 xl:right-12 top-3 right-3'
+    },
+    offerButton: {
+      text: 'Pidelo ahora',
+      href: '#contact-us',
+      className: 'xl:top-19 xl:right-12 top-11 right-3'
+    }
+  },
+  {
+    src: '/images/offers/offers-image-03.webp',
+    alt: 'Menú de Domingo',
+    dia: 0,
+    className: 'col-span-2 max-h-60',
+    offerText: {
+      text: 'Menú de Domingo',
+      description: 'Cazuela',
+      className: 'xl:top-5 xl:right-12 top-3 right-3'
+    },
+    offerButton: {
+      text: 'Pidelo ahora',
+      href: '#contact-us',
       className: 'xl:top-19 xl:right-12 top-11 right-3'
     }
   }

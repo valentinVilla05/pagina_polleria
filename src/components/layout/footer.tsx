@@ -5,7 +5,6 @@ import YoutubeIcon from '@/assets/svg/youtube-icon'
 
 import { Separator } from '@/components/ui/separator'
 
-import BistroLogo from '@/assets/svg/bistro-logo'
 import { footerData } from '@/assets/data/footer'
 
 const Footer = () => {
@@ -14,8 +13,8 @@ const Footer = () => {
       <div className='mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 max-md:flex-col sm:px-6 sm:py-6 md:gap-6 md:py-8'>
         <a href='/#home'>
           <div className='flex items-center gap-3'>
-            <BistroLogo className='gap-3' />
-            <span className='text-primary text-[20px] font-semibold'>Bistro</span>
+            <img src='/images/logo.png' alt='Asadero Ronda' />
+            <span className='text-primary text-[20px] font-semibold'>Asadero Ronda</span>
           </div>
         </a>
 
