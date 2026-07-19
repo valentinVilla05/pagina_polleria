@@ -3,7 +3,7 @@ import { Card, CardContent, CardTitle } from '@/components/ui/card'
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
 
 import { Separator } from '@/components/ui/separator'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 type Dish = {
   image: string
@@ -14,7 +14,7 @@ type Dish = {
 }[]
 
 const Dishes = ({ dishes, titulo }: { dishes: Dish; titulo: string }) => {
-  const [pagina, setPagina] = useState(0) // Estado para la pagina actual
+  const [pagina, setPagina] = useState(0)
 
   const [tamanoPagina, setTamanoPagina] = useState(() => {
     if (typeof window === 'undefined') return 4
@@ -38,64 +38,116 @@ const Dishes = ({ dishes, titulo }: { dishes: Dish; titulo: string }) => {
     return () => window.removeEventListener('resize', actualizarTamanoPagina)
   }, [])
 
-  const ultima_pagina = Math.max(0, Math.ceil(dishes.length / tamanoPagina) - 1)
-  const indice_incio = pagina * tamanoPagina
-  const platos_visibles = dishes.slice(indice_incio, indice_incio + tamanoPagina)
+  const paginas = useMemo(() => {
+    const grupos: Dish[] = []
+
+    for (let i = 0; i < dishes.length; i += tamanoPagina) {
+      grupos.push(dishes.slice(i, i + tamanoPagina))
+    }
+
+    return grupos.length > 0 ? grupos : [[]]
+  }, [dishes, tamanoPagina])
+
+  const ultima_pagina = Math.max(0, paginas.length - 1)
+
+  useEffect(() => {
+    setPagina(current => Math.min(current, ultima_pagina))
+  }, [ultima_pagina])
 
   const retroceder = () => setPagina(current => Math.max(0, current - 1))
   const avanzar = () => setPagina(current => Math.min(ultima_pagina, current + 1))
 
   return (
-    <section id='popular-dishes' className='py-8 sm:py-16 lg:py-24'>
-      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-        <div className='mx-auto mb-12 flex max-w-2xl flex-col items-center justify-center space-y-4 text-center sm:mb-16 lg:mb-24'>
-          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>{titulo}</h2>
-          {/*
-          <p className='text-muted-foreground text-xl'>
-            Explora nuestra variedad de {comida} para disfrutar solo o en compañia!
-          </p>
-          */}
+    <section id='popular-dishes' className='relative overflow-hidden py-12 sm:py-20 lg:py-28'>
+      {/* --- ELEMENTOS DECORATIVOS DE FONDO --- */}
+      <div className='pointer-events-none absolute inset-0 z-0 flex items-center justify-center overflow-hidden'>
+        {/* Logo como marca de agua semitransparente */}
+        <img
+          src='/images/logo.png'
+          alt='Decoración Logo'
+          className='absolute -top-10 -left-10 h-64 w-64 -rotate-12 transform opacity-5'
+        />
+        {/* Platos decorativos difuminados en las esquinas */}
+        <img
+          src='/images/hero-section/dish-01.webp'
+          alt='Decoración Plato 1'
+          className='absolute top-20 right-[-5%] h-72 w-72 rounded-full object-cover opacity-10 blur-sm'
+        />
+        <img
+          src='/images/hero-section/dish-03.webp'
+          alt='Decoración Plato 3'
+          className='absolute bottom-10 left-[-5%] h-60 w-60 rotate-45 transform rounded-full object-cover opacity-10 blur-sm'
+        />
+      </div>
+      {/* -------------------------------------- */}
+
+      <div className='relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+        <div className='mx-auto mb-12 flex max-w-2xl flex-col items-center justify-center space-y-4 text-center sm:mb-16'>
+          <h2 className='text-foreground text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl'>{titulo}</h2>
+          <div className='bg-primary mt-4 h-1 w-20 rounded-full'></div>
         </div>
 
-        {/* Dishes */}
-        <div className='flex items-center justify-center gap-6'>
+        {/* Controles y Carrusel */}
+        <div className='flex items-center justify-center gap-2 sm:gap-6'>
           <button
             onClick={retroceder}
             disabled={pagina == 0}
             aria-label='Página anterior'
-            className='hover:bg-muted rounded-full border p-2 transition disabled:cursor-not-allowed disabled:opacity-50'
+            className='hover:bg-primary hover:text-primary-foreground border-primary/20 bg-background disabled:hover:bg-background disabled:hover:text-foreground rounded-full border-2 p-3 shadow-sm transition-all disabled:cursor-not-allowed disabled:opacity-40'
           >
-            <SlArrowLeft className='h-4 w-4' />
+            <SlArrowLeft className='h-5 w-5' />
           </button>
-          <div className='grid w-full max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4'>
-            {platos_visibles.map((member, index) => (
-              <Card
-                key={index}
-                className='hover:border-primary border-primary/10 overflow-hidden rounded-none border py-0 shadow-none ring-0 transition-colors duration-300'
-              >
-                <CardContent className='px-0'>
-                  <div className='bg-muted'>
-                    <img src={member.image} alt={member.alt} className='h-auto w-full' />
-                  </div>
-                  <div className='space-y-3 px-6 py-5'>
-                    <CardTitle className='text-lg font-semibold'>{member.name}</CardTitle>
-                    <Separator />
-                    <div className='text-muted-foreground'>
-                      <p className='mb-1 text-base font-medium'>{member.type}</p>
-                      <p className='text-base'>{member.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+
+          <div className='w-full max-w-6xl overflow-hidden py-4'>
+            <div
+              className='flex transition-transform duration-700 ease-out'
+              style={{ transform: `translateX(-${pagina * 100}%)` }}
+            >
+              {paginas.map((grupo, paginaIndex) => (
+                <div
+                  key={paginaIndex}
+                  className='grid w-full flex-shrink-0 grid-cols-1 gap-6 px-2 md:grid-cols-2 xl:grid-cols-4'
+                >
+                  {grupo.map((member, index) => (
+                    <Card
+                      key={index}
+                      className='group hover:border-primary/50 border-primary/10 bg-card overflow-hidden rounded-2xl border shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl'
+                    >
+                      <CardContent className='p-0'>
+                        <div className='bg-muted overflow-hidden'>
+                          <img
+                            src={member.image}
+                            alt={member.alt}
+                            className='aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-110'
+                          />
+                        </div>
+                        <div className='flex flex-grow flex-col space-y-3 px-6 py-6'>
+                          <CardTitle className='text-foreground group-hover:text-primary text-xl font-bold transition-colors'>
+                            {member.name}
+                          </CardTitle>
+                          <Separator className='bg-primary/20' />
+                          <div className='text-muted-foreground flex-grow'>
+                            <p className='text-primary mb-2 text-sm font-bold tracking-wider uppercase'>
+                              {member.type}
+                            </p>
+                            <p className='text-sm leading-relaxed'>{member.description}</p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
+
           <button
             onClick={avanzar}
             disabled={pagina == ultima_pagina}
             aria-label='Página siguiente'
-            className='hover:bg-muted rounded-full border p-2 transition disabled:cursor-not-allowed disabled:opacity-50'
+            className='hover:bg-primary hover:text-primary-foreground border-primary/20 bg-background disabled:hover:bg-background disabled:hover:text-foreground rounded-full border-2 p-3 shadow-sm transition-all disabled:cursor-not-allowed disabled:opacity-40'
           >
-            <SlArrowRight className='h-4 w-4' />
+            <SlArrowRight className='h-5 w-5' />
           </button>
         </div>
       </div>

@@ -1,10 +1,5 @@
 import type { ComponentType } from 'react'
 
-/*
-import { ArrowRightIcon } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-*/
 type Stat = {
   icon: ComponentType
   description: string[]
@@ -12,33 +7,49 @@ type Stat = {
 
 const AboutUs = ({ stats }: { stats: Stat[] }) => {
   return (
-    <section
-      id='about-us'
-      className='before:bg-muted relative py-8 before:absolute before:inset-0 before:-z-10 before:skew-y-3 sm:py-16 lg:py-24'
-    >
+    <section id='about-us' className='relative overflow-hidden py-16 sm:py-24'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-        {/* Header */}
-        <div className='mx-auto mb-12 flex max-w-3xl flex-col items-center justify-center space-y-4 text-center md:mb-16 lg:mb-24'></div>
+        {/* Header con Logo */}
+        <div className='mx-auto mb-16 flex flex-col items-center text-center'>
+          <img src='/images/logo.png' alt='Logo' className='mb-6 h-24 w-auto opacity-90' />
+          <h2 className='text-foreground font-serif text-4xl font-bold'>Nuestra Esencia</h2>
+        </div>
 
-        {/* Video player and stats */}
-        <div className='relative mb-8 h-full w-full sm:mb-16 lg:mb-24'>
+        {/* Contenedor principal con decoración */}
+        <div className='relative mx-auto max-w-4xl'>
+          {/* Platos decorativos flotantes */}
+          <img
+            src='/images/hero-section/dish-01.webp'
+            className='absolute top-0 -left-20 hidden size-32 rotate-[-15deg] opacity-80 lg:block'
+            alt='Decoración'
+          />
+          <img
+            src='/images/hero-section/dish-02.webp'
+            className='absolute top-20 -right-20 hidden size-28 rotate-[10deg] opacity-80 lg:block'
+            alt='Decoración'
+          />
+          <img
+            src='/images/hero-section/dish-03.webp'
+            className='absolute bottom-10 -left-16 hidden size-24 rotate-[20deg] opacity-80 lg:block'
+            alt='Decoración'
+          />
+
+          {/* Imagen Principal */}
           <img
             src='/images/asadero_ronda.webp'
             alt='About us illustration'
-            className='h-full w-full object-cover'
+            className='marco-elegante h-full w-full object-cover'
             loading='lazy'
           />
 
-          {/* Stats card overlapping the video section */}
-          <div className='bg-background relative mx-auto mt-4 grid w-full max-w-3xl gap-4 border p-4 sm:mt-6 sm:grid-cols-2 sm:gap-6 sm:p-6 lg:absolute lg:-bottom-25 lg:left-1/2 lg:w-auto lg:-translate-x-1/2 lg:grid-cols-2 lg:gap-10 lg:p-8'>
+          {/* Stats card */}
+          <div className='bg-background/95 mx-auto mt-8 grid w-full max-w-2xl gap-4 border p-6 shadow-2xl backdrop-blur-sm sm:grid-cols-2'>
             {stats.map((stat, index) => (
-              <div key={index} className='flex flex-col items-center justify-center gap-2.5 text-center'>
-                <div className='flex size-7 items-center justify-center [&>svg]:size-7'>
+              <div key={index} className='flex flex-col items-center justify-center gap-2 p-4 text-center'>
+                <div className='text-accent flex size-10 items-center justify-center [&>svg]:size-8'>
                   <stat.icon />
                 </div>
-                <p className='text-muted-foreground text-base sm:text-lg'>
-                  {stat.description[0]} <br />
-                </p>
+                <p className='text-foreground text-lg font-medium'>{stat.description[0]}</p>
               </div>
             ))}
           </div>
