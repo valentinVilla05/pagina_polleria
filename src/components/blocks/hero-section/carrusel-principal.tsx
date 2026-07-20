@@ -13,7 +13,7 @@ export type MenuData = {
   imgAlt: string
 }
 
-const HeroSection = ({ menudata }: { menudata: MenuData[] }) => {
+const CarruselPrincipal = ({ menudata }: { menudata: MenuData[] }) => {
   const [mainApi, setMainApi] = useState<CarouselApi>()
   const [thumbApi, setThumbApi] = useState<CarouselApi>()
   const [current, setCurrent] = useState(0)
@@ -83,7 +83,7 @@ const HeroSection = ({ menudata }: { menudata: MenuData[] }) => {
             <CarouselContent>
               {menudata.map(item => (
                 <CarouselItem key={item.id} className='flex w-full items-center justify-center'>
-                  <img src={item.img} alt={item.imgAlt} className='marco-elegante size-72 object-contain' />
+                  <img src={item.img} alt={item.imgAlt} className='size-72 object-contain shadow-none' />
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -97,16 +97,16 @@ const HeroSection = ({ menudata }: { menudata: MenuData[] }) => {
               {menudata.map((item, index) => (
                 <CarouselItem
                   key={item.id}
-                  className='basis-1/3 cursor-pointer md:basis-1/4 lg:basis-1/6'
+                  className='flex basis-1/3 cursor-pointer justify-center md:basis-1/4 lg:basis-1/6'
                   onClick={() => handleThumbClick(index)}
                 >
                   <div
                     className={cn(
-                      'relative rounded-2xl border-2 p-2 transition-all',
+                      'relative flex items-center justify-center rounded-2xl border p-2 shadow-none transition-all',
                       current === index ? 'border-accent bg-white/10' : 'border-transparent'
                     )}
                   >
-                    <img src={item.img} alt={item.imgAlt} className='size-20 object-contain' />
+                    <img src={item.img} alt={item.imgAlt} className='size-20 object-contain shadow-none' />
                   </div>
                 </CarouselItem>
               ))}
@@ -118,4 +118,4 @@ const HeroSection = ({ menudata }: { menudata: MenuData[] }) => {
   )
 }
 
-export default HeroSection
+export default CarruselPrincipal
