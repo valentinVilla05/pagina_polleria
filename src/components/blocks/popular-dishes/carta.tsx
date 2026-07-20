@@ -122,12 +122,17 @@ const Dishes = ({ dishes, titulo }: { dishes: Dish; titulo: string }) => {
                           />
                         </div>
                         <div className='flex flex-grow flex-col space-y-3 px-6 py-6'>
-                          <CardTitle className='text-foreground group-hover:text-primary text-xl font-bold transition-colors'>
+                          {/* Cambio 1: Reemplazar 'text-foreground' por un color oscuro para el nombre del plato */}
+                          <CardTitle className='text-xl font-bold text-[#3c0909] transition-colors group-hover:opacity-80'>
                             {member.name}
                           </CardTitle>
-                          <Separator className='bg-primary/20' />
-                          <div className='text-muted-foreground flex-grow'>
-                            <p className='text-primary mb-2 text-sm font-bold tracking-wider uppercase'>
+
+                          <Separator className='bg-[#3c0909]/20' />
+
+                          {/* Cambio 2: Quitar 'text-muted-foreground' y poner un color oscuro para el resto del texto */}
+                          <div className='flex-grow text-[#3c0909]/80'>
+                            {/* Cambio 3: Quitar 'text-primary' y dejar que herede el color oscuro */}
+                            <p className='mb-2 text-sm font-bold tracking-wider text-[#3c0909] uppercase'>
                               {member.type}
                             </p>
                             <p className='text-sm leading-relaxed'>{member.description}</p>
