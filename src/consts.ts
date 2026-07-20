@@ -1,40 +1,34 @@
-// Site Configuration
-// Centralized configuration for site metadata, SEO, and branding
-
 export const SITE_TITLE = 'Asadero Ronda'
-export const SITE_DESCRIPTION =
-  'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.'
+export const SITE_DESCRIPTION = 'Disfruta de sabores caseros.'
 
-export const GITHUB_URL = 'https://github.com/yourusername/shadcn-astro-bistro-landing-page'
-export const SITE_URL = 'https://shadcnstudio.com/'
+export const SITE_URL = 'https://asaderoronda.com/'
 
 export const SITE_METADATA = {
   title: {
     default: 'Asadero Ronda'
   },
-  description:
-    'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.',
+  description: 'Disfruta de sabores caseros.',
   keywords: [
-    'Astro',
-    'astro template',
-    'astro theme',
-    'astro starter',
-    'shadcn template',
-    'shadcn ui',
-    'shadcn/ui components',
-    'tailwind template',
-    'tailwind css',
-    'react components',
-    'SEO optimized',
-    'web development',
-    'static site generator',
-    'modern web apps',
-    'performance',
-    'typescript'
+    'pollo',
+    'asadero',
+    'fritos',
+    'ensaladas',
+    'a domicilio',
+    'para recoger',
+    'casero',
+    'restaurante',
+    'granada',
+    'menus',
+    'familiar',
+    'compartir',
+    'postres',
+    'comida',
+    'comida caliente',
+    'sabroso'
   ],
-  authors: [{ name: 'shadcn Studio', url: SITE_URL }],
-  creator: 'shadcn Studio',
-  publisher: 'shadcn Studio',
+  authors: [{ name: 'Valentin Villa Pozo y Daniel Alfonso Vilain', url: SITE_URL }],
+  creator: 'Valentin Villa Pozo y Daniel Alfonso Vilain',
+  publisher: 'Valentin Villa Pozo y Daniel Alfonso Vilain',
   robots: {
     index: true,
     follow: true
@@ -54,61 +48,43 @@ export const SITE_METADATA = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    siteName: 'Bistro',
-    title: 'Demo: Bistro - Restaurant Landing Page | Shadcn Studio',
-    description:
-      'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.',
+    locale: 'es_ES',
+    siteName: 'Asadero Ronda',
+    title: 'Asadero Ronda | Asador Granada',
+    description: 'Disfruta de sabores caseros.',
     images: [
       {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Demo: Bistro - Restaurant Landing Page | Shadcn Studio',
+        alt: 'Asader Ronda | Asadero en Granada',
         type: 'image/png'
       }
     ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@shadcnstudio',
-    creator: '@shadcnstudio',
-    title: 'Demo: Bistro - Restaurant Landing Page | Shadcn Studio',
-    description:
-      'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.',
-    images: ['/images/og-image.png']
-  },
-  verification: {
-    google: '', // Add your Google verification code
-    yandex: '', // Add your Yandex verification code
-    bing: '' // Add your Bing verification code
   }
 }
 
 // Social media links
 export const SOCIAL_LINKS = {
-  github: GITHUB_URL,
-  twitter: 'https://twitter.com/shadcnstudio',
-  linkedin: 'https://linkedin.com/company/shadcnstudio',
-  discord: 'https://discord.gg/shadcnstudio'
+  instagram: ''
 }
 
 // Company information for structured data
 export const COMPANY_INFO = {
-  name: 'shadcn Studio',
+  name: 'Asadero Ronda',
   legalName: 'shadcn Studio Inc.',
   url: SITE_URL,
-  logo: `/images/site-logo.png`,
+  logo: `/images/logo.png`,
   foundingDate: '2024',
   address: {
-    streetAddress: '123 Web Dev Street',
-    addressLocality: 'San Francisco',
-    addressRegion: 'CA',
-    postalCode: '94102',
-    addressCountry: 'US'
+    streetAddress: 'C. Adelfa, 2, Ronda ',
+    addressLocality: 'Granada',
+    addressRegion: 'Andalucia',
+    postalCode: '18006',
+    addressCountry: 'ES'
   },
   contactPoint: {
-    telephone: '+1-555-123-4567',
+    telephone: '+34 642 65 36 04',
     contactType: 'customer support',
     email: 'support@shadcnstudio.com'
   },
