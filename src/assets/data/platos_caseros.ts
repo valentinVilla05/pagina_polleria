@@ -11,7 +11,7 @@ export const dishes_platos_caseros = [
     alt: 'Carne en salsa (tierna)',
     name: 'Carne en salsa (tierna) - 7€',
     type: 'Platos Caseros',
-    description: ''
+    description: 'Carne en salsa casera, tierna y jugosa'
   },
   {
     image: 'https://imag.bonviveur.com/pollo-al-ajillo-cerca.jpg',
@@ -25,14 +25,14 @@ export const dishes_platos_caseros = [
     alt: 'Fideuá',
     name: 'Fideuá - 6,50€',
     type: 'Platos Caseros',
-    description: ''
+    description: 'Fideuá tradicional de la casa'
   },
   {
     image: '/images/popular-dishes/macarrones.jpg',
     alt: 'Macarrones',
     name: 'Macarrones - 6€',
     type: 'Platos Caseros',
-    description: ''
+    description: 'Macarrones con salsa de tomate'
   },
   {
     image: 'https://www.divinacocina.es/wp-content/uploads/2024/09/callos-a-la-madrilena-c.jpg',
@@ -46,7 +46,7 @@ export const dishes_platos_caseros = [
     alt: 'Lentejas',
     name: 'Lentejas - 6€',
     type: 'Platos Caseros',
-    description: ''
+    description: 'Lentejas caseras con chorizo '
   },
   {
     image: '/images/popular-dishes/migas.jpg',
@@ -75,13 +75,13 @@ export const dishes_platos_caseros = [
     alt: 'Cazuela casera',
     name: 'Cazuela casera - 6€',
     type: 'Platos Caseros',
-    description: ''
+    description: 'Cazuela casera con ingredientes frescos'
   },
   {
     image: 'https://imag.bonviveur.com/huevos-rotos-con-jamon-o-huevos-estrellados.jpg',
     alt: 'Huevos fritos, patatas y jamón',
     name: 'Huevos fritos, patatas y jamón - 6€',
     type: 'Platos Caseros',
-    description: ''
+    description: 'Huevos fritos con patatas y jamón'
   }
 ]

@@ -111,7 +111,7 @@ const Dishes = ({ dishes, titulo }: { dishes: Dish; titulo: string }) => {
                   {grupo.map((member, index) => (
                     <Card
                       key={index}
-                      className='group hover:border-primary/50 border-primary/10 bg-card overflow-hidden rounded-2xl border shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl'
+                      className='group hover:border-primary/50 border-primary/10 bg-card text-card-foreground overflow-hidden rounded-2xl border shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl'
                     >
                       <CardContent className='p-0'>
                         <div className='bg-muted overflow-hidden'>
@@ -122,15 +122,15 @@ const Dishes = ({ dishes, titulo }: { dishes: Dish; titulo: string }) => {
                           />
                         </div>
                         <div className='flex flex-grow flex-col space-y-3 px-6 py-6'>
-                          <CardTitle className='text-foreground group-hover:text-primary text-xl font-bold transition-colors'>
+                          <CardTitle className='text-xl font-bold text-[oklch(0.25_0.1_22)] transition-colors group-hover:text-[oklch(0.25_0.1_22)]'>
                             {member.name}
                           </CardTitle>
-                          <Separator className='bg-primary/20' />
-                          <div className='text-muted-foreground flex-grow'>
-                            <p className='text-primary mb-2 text-sm font-bold tracking-wider uppercase'>
+                          <Separator className='bg-[oklch(0.74_0.15_65)]/20' />
+                          <div className='flex-grow text-[oklch(0.25_0.1_22)]/80'>
+                            <p className='mb-2 text-sm font-medium tracking-wide text-[oklch(0.25_0.1_22)] uppercase'>
                               {member.type}
                             </p>
-                            <p className='text-sm leading-relaxed'>{member.description}</p>
+                            <p className='text-sm leading-relaxed opacity-90'>{member.description}</p>
                           </div>
                         </div>
                       </CardContent>

@@ -11,7 +11,7 @@ export const dishes_fritos = [
     alt: 'Cazón en adobo',
     name: 'Cazón en adobo - 8€',
     type: 'Fritos',
-    description: ''
+    description: 'Cazón de '
   },
   {
     image:
@@ -26,7 +26,7 @@ export const dishes_fritos = [
     alt: 'Flamenquines caseros',
     name: 'Flamenquines caseros (5uds) - 7.50€',
     type: 'Fritos',
-    description: ''
+    description: 'Flamenquines de la casa'
   },
   {
     image: '/images/hero-section/dish-04.png',

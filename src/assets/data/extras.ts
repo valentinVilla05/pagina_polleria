@@ -19,7 +19,7 @@ export const dishes_extras = [
     alt: 'Patatas gajo',
     name: 'Patatas gajo (ración) - 4,50€ - ½ ración - 3,50€',
     type: 'Extras',
-    description: ''
+    description: 'Patatas gajo de la casa'
   },
   {
     image:
@@ -27,7 +27,7 @@ export const dishes_extras = [
     alt: 'Pimientos fritos',
     name: 'Pimientos fritos - 5€',
     type: 'Extras',
-    description: ''
+    description: 'Pimientos frescos fritos'
   },
   {
     image:
@@ -35,7 +35,7 @@ export const dishes_extras = [
     alt: 'Salsas: Alioli / Brava',
     name: 'Salsas: Alioli - 1,50€, Brava - 1,50€',
     type: 'Extras',
-    description: ''
+    description: 'Salsa alioli y salsa brava'
   },
   {
     image:
@@ -43,20 +43,20 @@ export const dishes_extras = [
     alt: 'Empanadillas caseras',
     name: 'Empanadillas caseras (4 uds.) - 4,50€',
     type: 'Extras',
-    description: ''
+    description: 'Empanadillas de la casa'
   },
   {
     image: 'https://recetasdecocina.elmundo.es/wp-content/uploads/2024/01/rollitos-de-primavera-receta.jpg',
     alt: 'Rollo de primavera',
     name: 'Rollo de primavera (2 uds.) - 3€',
     type: 'Extras',
-    description: ''
+    description: 'Rollo de primavera con verdura'
   },
   {
     image: 'https://www.melonsinjamon.com/wp-content/uploads/2022/04/receta-cuscus-rapido.jpg',
     alt: 'Cuscús',
-    name: 'Cuscús - 9,50€/p',
+    name: 'Cuscús - 9,50€/persona',
     type: 'Extras',
-    description: ''
+    description: 'Cuscús casero (por encargo). (minimo 4 personas)'
   }
 ]
