@@ -19,17 +19,17 @@ const AboutUs = ({ stats }: { stats: Stat[] }) => {
         <div className='relative mx-auto max-w-4xl'>
           {/* Platos decorativos flotantes */}
           <img
-            src='/images/hero-section/dish-01.webp'
+            src='/images/hero-section/dish-01.png'
             className='absolute top-0 -left-20 hidden size-32 rotate-[-15deg] opacity-80 lg:block'
             alt='Decoración'
           />
           <img
-            src='/images/hero-section/dish-02.webp'
+            src='/images/hero-section/dish-02.png'
             className='absolute top-20 -right-20 hidden size-28 rotate-[10deg] opacity-80 lg:block'
             alt='Decoración'
           />
           <img
-            src='/images/hero-section/dish-03.webp'
+            src='/images/hero-section/dish-03.png'
             className='absolute bottom-10 -left-16 hidden size-24 rotate-[20deg] opacity-80 lg:block'
             alt='Decoración'
           />
