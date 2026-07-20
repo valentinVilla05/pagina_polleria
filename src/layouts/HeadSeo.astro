@@ -31,7 +31,7 @@ const {
 } = Astro.props
 
 // Use site metadata defaults if not provided
-const finalTitle = title ? `Demo: ${title} | Bistro | Shadcn Studio` : SITE_METADATA.title.default
+const finalTitle = title ? `${title}` : SITE_METADATA.title.default
 const finalDescription = description || SITE_METADATA.description
 const finalKeywords = keywords || SITE_METADATA.keywords.join(', ')
 const finalImage = image || SITE_METADATA.openGraph.images[0].url
@@ -88,15 +88,6 @@ const schemaData = schema || defaultSchema
 <!-- Sitemap -->
 <link rel='sitemap' href='/sitemap-index.xml' />
 
-<!-- Verification (if provided) -->
-{
-  SITE_METADATA.verification.google && (
-    <meta name='google-site-verification' content={SITE_METADATA.verification.google} />
-  )
-}
-{SITE_METADATA.verification.bing && <meta name='msvalidate.01' content={SITE_METADATA.verification.bing} />}
-{SITE_METADATA.verification.yandex && <meta name='yandex-verification' content={SITE_METADATA.verification.yandex} />}
-
 <!-- Language and Locale -->
 <meta property='og:locale' content={SITE_METADATA.locale} />
 <meta http-equiv='content-language' content={SITE_METADATA.language} />
@@ -135,16 +126,6 @@ const schemaData = schema || defaultSchema
 {modifiedTime && <meta property='article:modified_time' content={modifiedTime} />}
 {author && <meta property='article:author' content={author} />}
 {type === 'article' && keywords && keywords.split(',').map(tag => <meta property='article:tag' content={tag.trim()} />)}
-
-<!-- Twitter -->
-<meta name='twitter:card' content={SITE_METADATA.twitter.card} />
-<meta name='twitter:site' content={SITE_METADATA.twitter.site} />
-<meta name='twitter:creator' content={SITE_METADATA.twitter.creator} />
-<meta name='twitter:title' content={title || SITE_METADATA.twitter.title} />
-<meta name='twitter:description' content={finalDescription} />
-<meta name='twitter:image' content={imageURL} />
-<meta name='twitter:image:alt' content={title || SITE_METADATA.openGraph.images[0].alt} />
-<meta property='twitter:url' content={canonicalURL} />
 
 <!-- Performance and Resource Hints -->
 <link rel='dns-prefetch' href='https://fonts.googleapis.com' />

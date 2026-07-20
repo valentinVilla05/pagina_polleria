@@ -1,6 +1,6 @@
 export const menusSemanales = [
   {
-    src: '/images/offers/offers-image-01.webp',
+    src: '/images/popular-dishes/macarrones.jpg',
     alt: 'Menú del martes',
     dia: 2,
     className: 'col-span-2 row-span-2',
@@ -16,7 +16,7 @@ export const menusSemanales = [
     }
   },
   {
-    src: '/images/offers/offers-image-02.webp',
+    src: 'https://www.miplato.es/tienda/1203-large_default_2x/cocido-andaluz.jpg',
     alt: 'Menú de miercoles',
     dia: 3,
     className: 'col-span-2 max-h-60',
@@ -32,7 +32,7 @@ export const menusSemanales = [
     }
   },
   {
-    src: '/images/offers/offers-image-03.webp',
+    src: '/images/popular-dishes/lentejas.jpg',
     alt: 'Menú de Jueves',
     dia: 4,
     className: 'col-span-2 max-h-60',
@@ -48,7 +48,7 @@ export const menusSemanales = [
     }
   },
   {
-    src: '/images/offers/offers-image-03.webp',
+    src: '/images/popular-dishes/fideua.jpg',
     alt: 'Menú de Viernes',
     dia: 5,
     className: 'col-span-2 max-h-60',
@@ -64,7 +64,7 @@ export const menusSemanales = [
     }
   },
   {
-    src: '/images/offers/offers-image-03.webp',
+    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnA7jpRtnYhYHBdQ9pSE4iBeS9wdeWhpccxP4ZPogZmw&s=10',
     alt: 'Menú de Sabado',
     dia: 6,
     className: 'col-span-2 max-h-60',
@@ -80,7 +80,7 @@ export const menusSemanales = [
     }
   },
   {
-    src: '/images/offers/offers-image-03.webp',
+    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc1GaiZtgH4kwxBSdy82V6E5SoayWcLBuopf63-tjTWd6a-vuF0_Vgs38&s=10',
     alt: 'Menú de Domingo',
     dia: 0,
     className: 'col-span-2 max-h-60',

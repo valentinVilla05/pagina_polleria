@@ -1,7 +1,4 @@
-import FacebookIcon from '@/assets/svg/facebook-icon'
 import InstagramIcon from '@/assets/svg/instagram-icon'
-import TwitterIcon from '@/assets/svg/twitter-icon'
-import YoutubeIcon from '@/assets/svg/youtube-icon'
 
 import { Separator } from '@/components/ui/separator'
 
@@ -32,16 +29,7 @@ const Footer = () => {
 
         <div className='flex items-center gap-4'>
           <a href='#' className='hover:text-primary'>
-            <FacebookIcon className='size-5' />
-          </a>
-          <a href='#' className='hover:text-primary'>
             <InstagramIcon className='size-5' />
-          </a>
-          <a href='#' className='hover:text-primary'>
-            <TwitterIcon className='size-5' />
-          </a>
-          <a href='#' className='hover:text-primary'>
-            <YoutubeIcon className='size-5' />
           </a>
         </div>
       </div>

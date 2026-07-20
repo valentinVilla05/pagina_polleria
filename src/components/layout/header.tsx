@@ -127,7 +127,7 @@ const Header = ({ navigationData, className }: HeaderProps) => {
                   <a href='#contact-us'>Contáctanos</a>
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>Book table</TooltipContent>
+              <TooltipContent>Contáctanos</TooltipContent>
             </Tooltip>
           </TooltipProvider>
 

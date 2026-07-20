@@ -111,7 +111,7 @@ const Dishes = ({ dishes, titulo }: { dishes: Dish; titulo: string }) => {
                   {grupo.map((member, index) => (
                     <Card
                       key={index}
-                      className='group hover:border-primary/50 border-primary/10 bg-card overflow-hidden rounded-2xl border shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl'
+                      className='group hover:border-primary/50 border-primary/10 bg-card text-card-foreground overflow-hidden rounded-2xl border shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl'
                     >
                       <CardContent className='p-0'>
                         <div className='bg-muted overflow-hidden'>
@@ -122,20 +122,15 @@ const Dishes = ({ dishes, titulo }: { dishes: Dish; titulo: string }) => {
                           />
                         </div>
                         <div className='flex flex-grow flex-col space-y-3 px-6 py-6'>
-                          {/* Cambio 1: Reemplazar 'text-foreground' por un color oscuro para el nombre del plato */}
-                          <CardTitle className='text-xl font-bold text-[#3c0909] transition-colors group-hover:opacity-80'>
+                          <CardTitle className='text-xl font-bold text-[oklch(0.25_0.1_22)] transition-colors group-hover:text-[oklch(0.25_0.1_22)]'>
                             {member.name}
                           </CardTitle>
-
-                          <Separator className='bg-[#3c0909]/20' />
-
-                          {/* Cambio 2: Quitar 'text-muted-foreground' y poner un color oscuro para el resto del texto */}
-                          <div className='flex-grow text-[#3c0909]/80'>
-                            {/* Cambio 3: Quitar 'text-primary' y dejar que herede el color oscuro */}
-                            <p className='mb-2 text-sm font-bold tracking-wider text-[#3c0909] uppercase'>
+                          <Separator className='bg-[oklch(0.74_0.15_65)]/20' />
+                          <div className='flex-grow text-[oklch(0.25_0.1_22)]/80'>
+                            <p className='mb-2 text-sm font-medium tracking-wide text-[oklch(0.25_0.1_22)] uppercase'>
                               {member.type}
                             </p>
-                            <p className='text-sm leading-relaxed'>{member.description}</p>
+                            <p className='text-sm leading-relaxed opacity-90'>{member.description}</p>
                           </div>
                         </div>
                       </CardContent>
