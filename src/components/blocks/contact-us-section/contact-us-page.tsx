@@ -23,33 +23,33 @@ const ContactUs = ({ contactInfo }: { contactInfo: ContactInfo }) => {
 
       {/* --- Marcas de Agua Dobles (Logotipos difuminados en las esquinas) --- */}
       <div className='pointer-events-none absolute top-0 left-0 z-0 -translate-x-16 -translate-y-16 opacity-[0.03]'>
-        <img src='/images/logo.png' alt='' className='h-[400px] w-[400px] rotate-12 object-contain' />
+        <img src='/images/logo.png' alt='' className='h-[400px] w-[400px] rotate-12 object-contain shadow-none' />
       </div>
       <div className='pointer-events-none absolute right-0 bottom-0 z-0 translate-x-16 translate-y-16 opacity-[0.03]'>
-        <img src='/images/logo.png' alt='' className='h-[500px] w-[500px] -rotate-12 object-contain' />
+        <img src='/images/logo.png' alt='' className='h-[500px] w-[500px] rotate-12 object-contain shadow-none' />
       </div>
 
       {/* --- Densidad de Platos Decorativos Flotantes (01 al 05) --- */}
       <img
         src='/images/hero-section/dish-01.png'
-        className='absolute top-10 left-6 z-10 hidden size-28 rotate-[-15deg] opacity-75 drop-shadow-xl transition-transform duration-500 hover:scale-110 xl:block'
+        className='absolute top-10 left-6 z-10 hidden size-28 rotate-[-15deg] opacity-75 shadow-none drop-shadow-xl transition-transform duration-500 hover:scale-110 xl:block'
         alt='Decoración'
       />
       <img
         src='/images/hero-section/dish-02.png'
-        className='absolute top-24 right-12 z-10 hidden size-32 rotate-[20deg] opacity-70 drop-shadow-lg transition-transform duration-500 hover:scale-110 lg:block'
+        className='absolute top-24 right-12 z-10 hidden size-32 rotate-[20deg] opacity-70 shadow-none drop-shadow-lg transition-transform duration-500 hover:scale-110 lg:block'
       />
       <img
         src='/images/hero-section/dish-03.png'
-        className='absolute top-1/2 -left-14 z-10 hidden size-36 -translate-y-1/2 rotate-[35deg] opacity-80 drop-shadow-xl transition-transform duration-500 hover:scale-110 lg:block'
+        className='absolute top-1/2 -left-14 z-10 hidden size-36 -translate-y-1/2 rotate-[35deg] opacity-80 shadow-none drop-shadow-xl transition-transform duration-500 hover:scale-110 lg:block'
       />
       <img
         src='/images/hero-section/dish-04.png'
-        className='absolute top-1/3 -right-12 z-10 hidden size-28 rotate-[-25deg] opacity-75 drop-shadow-lg transition-transform duration-500 hover:scale-110 xl:block'
+        className='shadow-nonesize-28 absolute top-1/3 -right-12 z-10 hidden rotate-[-25deg] opacity-75 shadow-none drop-shadow-lg transition-transform duration-500 hover:scale-110 xl:block'
       />
       <img
         src='/images/hero-section/dish-05.png'
-        className='absolute right-1/3 bottom-8 z-10 hidden size-36 rotate-[15deg] opacity-80 drop-shadow-xl transition-transform duration-500 hover:scale-110 lg:block'
+        className='absolute right-1/3 bottom-8 z-10 hidden size-36 rotate-[15deg] opacity-80 shadow-none drop-shadow-xl transition-transform duration-500 hover:scale-110 lg:block'
       />
 
       {/* --- Contenedor de la interfaz --- */}
@@ -77,7 +77,7 @@ const ContactUs = ({ contactInfo }: { contactInfo: ContactInfo }) => {
             <img
               src='/images/contact-us-01.webp'
               alt='Contact illustration'
-              className='h-[400px] w-full object-cover transition-transform duration-700 group-hover:scale-105 max-lg:max-h-70 sm:h-[500px]'
+              className='h-[400px] w-full object-cover shadow-none transition-transform duration-700 group-hover:scale-105 max-lg:max-h-70 sm:h-[500px]'
               loading='lazy'
             />
             <div className='absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-60'></div>
