@@ -74,7 +74,7 @@ const MenusSemanales = ({ menu }: { menu: menuDelDia }) => {
                       <p className='text-foreground font-(family-name:--font-kaushan-script) text-lg opacity-100! md:text-xl lg:text-2xl xl:text-3xl'>
                         {image.offerText.text}
                       </p>
-                      <p className='text-muted-foreground'>{image.offerText.description}</p>
+                      <p className='text-foreground'>{image.offerText.description}</p>
                     </div>
                   )}
 
