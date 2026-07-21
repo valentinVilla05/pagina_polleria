@@ -52,7 +52,7 @@ const CarruselPrincipal = ({ menudata }: { menudata: MenuData[] }) => {
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className='bg-background/20 flex items-center gap-2 rounded-full border border-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-md'
+                  className='bg-background/20 border-border text-foreground flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium backdrop-blur-md'
                 >
                   <item.icon className='size-4' />
                   {item.text}
@@ -60,11 +60,11 @@ const CarruselPrincipal = ({ menudata }: { menudata: MenuData[] }) => {
               ))}
             </div>
 
-            <h1 className='font-alexbrush text-6xl font-semibold whitespace-nowrap text-white sm:text-9xl'>
+            <h1 className='font-alexbrush text-foreground text-6xl font-semibold whitespace-nowrap sm:text-9xl'>
               Asadero Ronda
             </h1>
 
-            <p className='max-w-xl text-2xl text-white/80 max-lg:text-center'>Comida casera para llevar</p>
+            <p className='text-muted-foreground max-w-xl text-2xl max-lg:text-center'>Comida casera para llevar</p>
 
             {/* Cambia la clase del botón por esta configuración */}
             <Button
@@ -103,7 +103,7 @@ const CarruselPrincipal = ({ menudata }: { menudata: MenuData[] }) => {
                   <div
                     className={cn(
                       'relative flex items-center justify-center rounded-2xl border p-2 shadow-none transition-all',
-                      current === index ? 'border-accent bg-white/10' : 'border-transparent'
+                      current === index ? 'border-accent bg-popover/10' : 'border-transparent'
                     )}
                   >
                     <img src={item.img} alt={item.imgAlt} className='size-20 object-contain shadow-none' />

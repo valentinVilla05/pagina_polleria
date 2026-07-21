@@ -38,7 +38,7 @@ const MenusSemanales = ({ menu }: { menu: menuDelDia }) => {
   // Aplicar las clases correctas: el primero es grande, los demás son pequeños
   const menuConClases = menuOrdenado.map((item, index) => ({
     ...item,
-    className: index === 0 ? 'col-span-2 row-span-2' : 'col-span-2 max-h-60'
+    className: index === 0 ? 'col-span-2 row-span-2' : 'col-span-2 h-60'
   }))
 
   return (
@@ -68,13 +68,13 @@ const MenusSemanales = ({ menu }: { menu: menuDelDia }) => {
                 loading='lazy'
               />
               {(image.offerText || image.offerButton) && (
-                <div className='absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-2 p-4'>
+                <div className='bg-background/80 absolute inset-x-0 bottom-0 flex flex-col justify-end gap-2 rounded-none p-4 backdrop-blur-sm'>
                   {image.offerText && (
                     <div className={cn('min-w-0 flex-1', image.offerText.className)}>
-                      <p className='font-(family-name:--font-kaushan-script) text-lg text-white md:text-xl lg:text-2xl xl:text-3xl'>
+                      <p className='text-foreground font-(family-name:--font-kaushan-script) text-lg opacity-100! md:text-xl lg:text-2xl xl:text-3xl'>
                         {image.offerText.text}
                       </p>
-                      <p className='text-white/90'>{image.offerText.description}</p>
+                      <p className='text-muted-foreground'>{image.offerText.description}</p>
                     </div>
                   )}
 

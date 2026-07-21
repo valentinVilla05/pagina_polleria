@@ -99,7 +99,7 @@ const Header = ({ navigationData, className }: HeaderProps) => {
         {/* Logo */}
         <a href='/#home' className='flex items-center gap-3'>
           <img src='/images/logo.png' alt='Asadero Ronda' className='shadow-none' />
-          <span className='text-primary text-[20px] font-semibold'>Asadero Ronda</span>
+          <span className='text-foreground text-[20px] font-semibold'>Asadero Ronda</span>
         </a>
 
         {/* Navigation */}

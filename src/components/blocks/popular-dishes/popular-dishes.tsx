@@ -19,7 +19,7 @@ const PopularDishes = ({ popularDishes }: { popularDishes: PopularDish }) => {
             Nuestra carta
           </Badge>
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Recomendaciones de la Casa </h2>
-          <p className='text-muted-foreground text-xl'>¡Descubre nuestros menús de!</p>
+          <p className='text-muted-foreground text-xl'>¡Descubre nuestros menús de pollos asados!</p>
         </div>
 
         {/* Dishes */}
@@ -27,7 +27,7 @@ const PopularDishes = ({ popularDishes }: { popularDishes: PopularDish }) => {
           {popularDishes.map((member, index) => (
             <Card
               key={index}
-              className='hover:border-primary border-primary/10 overflow-hidden rounded-none border py-0 shadow-none ring-0 transition-colors duration-300'
+              className='hover:border-primary border-primary/10 flex overflow-hidden rounded border py-0 shadow-none ring-0'
             >
               <CardContent className='px-0'>
                 <div className='bg-muted'>

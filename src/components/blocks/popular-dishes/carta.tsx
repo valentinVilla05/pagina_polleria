@@ -70,12 +70,12 @@ const Dishes = ({ dishes, titulo }: { dishes: Dish; titulo: string }) => {
         />
         {/* Platos decorativos difuminados en las esquinas */}
         <img
-          src='/images/hero-section/dish-01.webp'
+          src='/images/hero-section/dish-01.png'
           alt='Decoración Plato 1'
           className='absolute top-20 right-[-5%] h-72 w-72 rounded-full object-cover opacity-10 blur-sm'
         />
         <img
-          src='/images/hero-section/dish-03.webp'
+          src='/images/hero-section/dish-03.png'
           alt='Decoración Plato 3'
           className='absolute bottom-10 left-[-5%] h-60 w-60 rotate-45 transform rounded-full object-cover opacity-10 blur-sm'
         />
