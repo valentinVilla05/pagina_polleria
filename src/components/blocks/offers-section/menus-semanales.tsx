@@ -38,7 +38,7 @@ const MenusSemanales = ({ menu }: { menu: menuDelDia }) => {
   // Aplicar las clases correctas: el primero es grande, los demás son pequeños
   const menuConClases = menuOrdenado.map((item, index) => ({
     ...item,
-    className: index === 0 ? 'col-span-2 row-span-2' : 'col-span-2 h-60'
+    className: index === 0 ? 'col-span-2 row-span-2' : 'col-span-2'
   }))
 
   return (
@@ -60,15 +60,25 @@ const MenusSemanales = ({ menu }: { menu: menuDelDia }) => {
         {/* Gallery Grid */}
         <div className='grid grid-cols-2 gap-6 md:grid-cols-4'>
           {menuConClases.map((image, index) => (
-            <div key={index} className={cn('group relative overflow-hidden rounded-none', image.className)}>
-              <img
-                src={image.src}
-                alt={image.alt}
-                className='h-full w-full object-cover transition-transform duration-300 hover:scale-105'
-                loading='lazy'
-              />
+            <div
+              key={index}
+              className={cn('group bg-background flex flex-col overflow-hidden rounded-none', image.className)}
+            >
+              {/* Contenedor de imagen: sin recorte por overlay, la imagen se ve entera */}
+              <div
+                className={cn('relative w-full overflow-hidden', index === 0 ? 'aspect-square flex-1' : 'aspect-[4/3]')}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className='h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105'
+                  loading='lazy'
+                />
+              </div>
+
+              {/* Bloque de texto/botón: ahora debajo de la imagen, no encima */}
               {(image.offerText || image.offerButton) && (
-                <div className='bg-background/80 absolute inset-x-0 bottom-0 flex flex-col justify-end gap-2 rounded-none p-4 backdrop-blur-sm'>
+                <div className='flex flex-col justify-end gap-2 p-4'>
                   {image.offerText && (
                     <div className={cn('min-w-0 flex-1', image.offerText.className)}>
                       <p className='text-foreground font-(family-name:--font-kaushan-script) text-lg opacity-100! md:text-xl lg:text-2xl xl:text-3xl'>

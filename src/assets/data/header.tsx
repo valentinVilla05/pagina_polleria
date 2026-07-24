@@ -10,7 +10,7 @@ export const navigationData: NavigationSection[] = [
     href: '#contact-us'
   },
   {
-    title: 'Ofertas',
+    title: 'Menú del día',
     href: '#offers'
   }
 ]
