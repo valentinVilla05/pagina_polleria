@@ -8,6 +8,7 @@ type PopularDish = {
   name: string
   type: string
   description: string
+  crossorigin: string
 }[]
 
 const PopularDishes = ({ popularDishes }: { popularDishes: PopularDish }) => {
