@@ -12,7 +12,7 @@ const AboutUs = ({ stats }: { stats?: Stat[] }) => {
     <section id='about-us' className='relative overflow-hidden py-16 sm:py-24'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='mx-auto mb-16 flex flex-col items-center text-center'>
-          <img src='public/images/logo_grande.png' alt='Logo' className='mb-6 h-75 w-auto opacity-90 shadow-none' />
+          <img src='images/logo_grande.png' alt='Logo' className='mb-6 h-75 w-auto opacity-90 shadow-none' />
           <h2 className='text-foreground font-serif text-4xl font-bold'>Nuestra Esencia</h2>
         </div>
 
