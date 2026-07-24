@@ -48,7 +48,8 @@ const CarruselPrincipal = ({ menudata }: { menudata: MenuData[] }) => {
               {[
                 { icon: Snowflake, text: 'Hay hielo' },
                 { icon: Flame, text: 'Pan de leña' },
-                { icon: ShoppingBasket, text: 'Pollos por encargo' }
+                { icon: ShoppingBasket, text: 'Pollos por encargo' },
+                { icon: ShoppingBasket, text: 'Cuscus casero' }
               ].map((item, idx) => (
                 <div
                   key={idx}

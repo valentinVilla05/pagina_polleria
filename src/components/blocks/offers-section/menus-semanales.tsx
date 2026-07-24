@@ -109,6 +109,9 @@ const MenusSemanales = ({ menu }: { menu: menuDelDia }) => {
           ))}
         </div>
       </div>
+      <div className='mt-20 flex justify-center align-middle'>
+        <img src='public/images/cartel.png' alt='cartel' />
+      </div>
     </section>
   )
 }
