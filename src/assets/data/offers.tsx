@@ -32,7 +32,7 @@ export const menusSemanales = [
     }
   },
   {
-    src: '/images/popular-dishes/lentejas.jpg',
+    src: 'https://i.ytimg.com/vi/ACTfLIS8_4o/sddefault.jpg',
     alt: 'Menú de Jueves',
     dia: 4,
     className: 'col-span-2 max-h-60',
