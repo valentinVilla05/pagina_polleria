@@ -46,11 +46,7 @@ const MenusSemanales = ({ menu }: { menu: menuDelDia }) => {
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='mb-12 space-y-4 text-center sm:mb-16 lg:mb-24'>
-          <Badge variant='outline' className='h-auto text-sm font-normal'>
-            Menús de la semana
-          </Badge>
-
-          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>¡Prueba nuestro menú de hoy!</h2>
+          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>¡Prueba nuestro menú del día!</h2>
 
           <p className='text-muted-foreground text-xl'>
             Menú del dia con 2º plato a elegir. Incluye pan y postre. (Entre semana 11.50€ / Fin de semana 12.50€)

@@ -124,7 +124,7 @@ const Header = ({ navigationData, className }: HeaderProps) => {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button className='ml-4 rounded-full sm:hidden' asChild>
-                  <a href='#contact-us'>Contáctanos</a>
+                  <a href='#contact-us'>Pide ya</a>
                 </Button>
               </TooltipTrigger>
               <TooltipContent>Contáctanos</TooltipContent>
