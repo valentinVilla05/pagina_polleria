@@ -1,8 +1,8 @@
 export const menudata = [
   {
     id: 1,
-    img: '/images/hero-section/dish-01.png',
-    imgAlt: 'Albondigas en su salsa'
+    img: '/images/hero-section/dish-03.png',
+    imgAlt: 'Pollo asado'
   },
   {
     id: 2,
@@ -11,8 +11,8 @@ export const menudata = [
   },
   {
     id: 3,
-    img: '/images/hero-section/dish-03.png',
-    imgAlt: 'Pollo asado'
+    img: '/images/hero-section/dish-01.png',
+    imgAlt: 'Albondigas en su salsa'
   },
   {
     id: 4,

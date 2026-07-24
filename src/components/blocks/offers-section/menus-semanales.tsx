@@ -52,7 +52,7 @@ const MenusSemanales = ({ menu }: { menu: menuDelDia }) => {
 
           <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>¡Prueba nuestro menú de hoy!</h2>
 
-          <p className='text-muted-foreground text-xl'>
+          <p className='text-foreground text-xl'>
             Menú del dia con 2º plato a elegir. Incluye pan y postre. (Entre semana 11.50€ / Fin de semana 12.50€)
           </p>
         </div>
@@ -76,9 +76,9 @@ const MenusSemanales = ({ menu }: { menu: menuDelDia }) => {
                 />
               </div>
 
-              {/* Bloque de texto/botón: ahora debajo de la imagen, no encima */}
+              {/* Bloque de texto */}
               {(image.offerText || image.offerButton) && (
-                <div className='flex flex-col justify-end gap-2 p-4'>
+                <div className='flex flex-col justify-end gap-2 border p-4'>
                   {image.offerText && (
                     <div className={cn('min-w-0 flex-1', image.offerText.className)}>
                       <p className='text-foreground font-(family-name:--font-kaushan-script) text-lg opacity-100! md:text-xl lg:text-2xl xl:text-3xl'>

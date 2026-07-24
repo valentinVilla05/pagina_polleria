@@ -66,7 +66,7 @@ const ContactUs = ({ contactInfo }: { contactInfo: ContactInfo }) => {
             <h2 className='text-foreground text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl'>Contáctanos</h2>
             <div className='bg-primary/70 mx-auto mt-3 h-1 w-16 rounded-full'></div>
           </div>
-          <p className='max-w-lg text-xl font-medium text-muted-foreground'>
+          <p className='text-muted-foreground max-w-lg text-xl font-medium'>
             ¡Contáctanos y recibe tu pedido sin filas y sin tener que esperar!
           </p>
         </div>
@@ -86,7 +86,7 @@ const ContactUs = ({ contactInfo }: { contactInfo: ContactInfo }) => {
           {/* Información y Tarjetas */}
           <div>
             <h3 className='text-foreground mb-3 text-3xl font-bold tracking-tight'>Estamos para atenderte</h3>
-            <p className='mb-8 text-lg leading-relaxed font-medium text-muted-foreground'>
+            <p className='text-foreground/90 mb-8 text-lg leading-relaxed font-semibold'>
               Si te gustó nuestros servicios, no dudes en ponernos una valoración positiva en Google Maps.
             </p>
 
@@ -109,7 +109,7 @@ const ContactUs = ({ contactInfo }: { contactInfo: ContactInfo }) => {
                       </Avatar>
                       <div className='space-y-2'>
                         <h4 className='text-foreground text-lg font-bold tracking-wide'>{info.title}</h4>
-                        <div className='text-muted-foreground leading-relaxed font-semibold'>
+                        <div className='text-foreground/90 leading-relaxed font-semibold'>
                           {info.description.split('\n').map((line, idx) => (
                             <p key={idx}>{line}</p>
                           ))}

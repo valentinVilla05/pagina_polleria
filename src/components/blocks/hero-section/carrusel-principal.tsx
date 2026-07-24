@@ -64,7 +64,9 @@ const CarruselPrincipal = ({ menudata }: { menudata: MenuData[] }) => {
               Asadero Ronda
             </h1>
 
-            <p className='text-muted-foreground max-w-xl text-2xl max-lg:text-center'>Comida casera para llevar</p>
+            <p className='text-foreground/90 max-w-xl text-2xl leading-relaxed font-medium max-lg:text-center'>
+              Pollo asado, platos caseros y postres recién preparados.
+            </p>
 
             {/* Cambia la clase del botón por esta configuración */}
             <Button
@@ -73,7 +75,7 @@ const CarruselPrincipal = ({ menudata }: { menudata: MenuData[] }) => {
               className='bg-foreground text-background hover:bg-foreground/90 rounded-full px-8 font-bold'
             >
               <a href='#contact-us'>
-                Pide ya <ArrowRightIcon className='ml-2' />
+                Pide por Whatsapp <ArrowRightIcon className='ml-2' />
               </a>
             </Button>
           </div>

@@ -11,7 +11,11 @@ const AboutUs = ({ stats }: { stats: Stat[] }) => {
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Header con Logo */}
         <div className='mx-auto mb-16 flex flex-col items-center text-center'>
-          <img src='/images/logo.png' alt='Logo' className='mb-6 h-24 w-auto opacity-90 shadow-none' />
+          <img
+            src='public/favicon/apple-touch-icon.png'
+            alt='Logo'
+            className='mb-6 h-75 w-auto opacity-90 shadow-none'
+          />
           <h2 className='text-foreground font-serif text-4xl font-bold'>Nuestra Esencia</h2>
         </div>
 
@@ -49,7 +53,7 @@ const AboutUs = ({ stats }: { stats: Stat[] }) => {
                 <div className='text-accent flex size-10 items-center justify-center [&>svg]:size-8'>
                   <stat.icon />
                 </div>
-                <p className='text-foreground text-lg font-medium'>{stat.description[0]}</p>
+                <p className='text-foreground/95 text-lg leading-relaxed font-semibold'>{stat.description[0]}</p>
               </div>
             ))}
           </div>
