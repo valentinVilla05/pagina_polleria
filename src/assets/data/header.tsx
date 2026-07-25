@@ -6,11 +6,11 @@ export const navigationData: NavigationSection[] = [
     href: '#about-us'
   },
   {
-    title: 'Pide ya',
+    title: 'Pide por WhatsApp',
     href: '#contact-us'
   },
   {
-    title: 'Ofertas',
+    title: 'Menú del día',
     href: '#offers'
   }
 ]

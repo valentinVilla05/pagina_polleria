@@ -7,8 +7,7 @@ export const dishes_extras = [
     description: ''
   },
   {
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA0qagsIdifCRN-xfEmTgxv99Pl3aYXRVQ6HVVYqYXprc_w69SJp0k9Odu&s=10',
+    image: '/images/patatasbravas.webp',
     alt: 'Patatas bravas',
     name: 'Patatas bravas (ración) - 4,50€ - ½ ración - 3,50€',
     type: 'Extras',
@@ -18,8 +17,8 @@ export const dishes_extras = [
     image: 'https://www.divinacocina.es/wp-content/uploads/2015/10/patatas-gajo-especias-1.jpg',
     alt: 'Patatas gajo',
     name: 'Patatas gajo (ración) - 4,50€ - ½ ración - 3,50€',
-    type: 'Extras',
-    description: 'Patatas gajo de la casa'
+    type: '',
+    description: ''
   },
   {
     image:
@@ -30,23 +29,21 @@ export const dishes_extras = [
     description: 'Pimientos frescos fritos'
   },
   {
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr_SmfeOacf_lJpXdgpKQtic8qjW8ugpTW2XaC1e36it2LVN9Y5K_Qu_cX&s=10',
+    image: '/images/alioli.webp',
     alt: 'Salsas: Alioli / Brava',
     name: 'Salsas: Alioli - 1,50€, Brava - 1,50€',
     type: 'Extras',
     description: 'Salsa alioli y salsa brava'
   },
   {
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQklDL9TOhE-MVXa0mRFmiT2Cx4GOE_AOvLMy_5g1zA699zLo-1Jz0HCHw&s=10',
+    image: '/images/empanadillas.webp',
     alt: 'Empanadillas caseras',
     name: 'Empanadillas caseras (4 uds.) - 4,50€',
     type: 'Extras',
     description: 'Empanadillas de la casa'
   },
   {
-    image: 'https://recetasdecocina.elmundo.es/wp-content/uploads/2024/01/rollitos-de-primavera-receta.jpg',
+    image: '/images/rollitosprimavera.webp',
     alt: 'Rollo de primavera',
     name: 'Rollo de primavera (2 uds.) - 3€',
     type: 'Extras',

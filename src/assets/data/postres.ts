@@ -8,8 +8,7 @@ export const dishes_postres = [
     description: ''
   },
   {
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2FN8tiAJwGHxyh5uklodRZY8drKxOYSAZDG7kGZVTVpgHdTd1fJb-afg&s=10',
+    image: '/images/natillas.webp',
     alt: 'Natillas',
     name: 'Natillas - 2€',
     type: 'Postres',

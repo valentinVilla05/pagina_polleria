@@ -21,7 +21,6 @@ export const contactInfo = [
   {
     title: 'Email',
     icon: Mail,
-    description: 'info@seliziakitchen.com',
-    link: 'mailto:info@seliziakitchen.com' // opcional, si también quieres que Email sea clicable
+    description: 'asaderoronda@gmail.com'
   }
 ]

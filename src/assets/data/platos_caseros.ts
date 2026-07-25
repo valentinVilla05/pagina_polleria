@@ -1,17 +1,17 @@
 export const dishes_platos_caseros = [
   {
-    image: '/images/hero-section/dish-01.png',
+    image: '/images/albondigas.webp',
     alt: 'Albóndigas caseras',
     name: 'Albóndigas caseras - 9€',
     type: 'Platos Caseros',
     description: ''
   },
   {
-    image: 'https://www.divinacocina.es/wp-content/uploads/2017/06/carne-en-salsa-casera-vv1.jpg',
+    image: '/images/carneensalsa.webp',
     alt: 'Carne en salsa (tierna)',
     name: 'Carne en salsa (tierna) - 7€',
     type: 'Platos Caseros',
-    description: 'Carne en salsa casera, tierna y jugosa'
+    description: 'Carne en salsa casera'
   },
   {
     image: 'https://imag.bonviveur.com/pollo-al-ajillo-cerca.jpg',
@@ -21,49 +21,49 @@ export const dishes_platos_caseros = [
     description: ''
   },
   {
-    image: '/images/popular-dishes/fideua.jpg',
+    image: '/images/fidedua.webp',
     alt: 'Fideuá',
     name: 'Fideuá - 6,50€',
     type: 'Platos Caseros',
     description: 'Fideuá tradicional de la casa'
   },
   {
-    image: '/images/popular-dishes/macarrones.jpg',
+    image: '/images/macarrones.webp',
     alt: 'Macarrones',
     name: 'Macarrones - 6€',
     type: 'Platos Caseros',
     description: 'Macarrones con salsa de tomate'
   },
   {
-    image: 'https://www.divinacocina.es/wp-content/uploads/2024/09/callos-a-la-madrilena-c.jpg',
+    image: '/images/callos.webp',
     alt: 'Callos',
     name: 'Callos - 6€',
     type: 'Platos Caseros',
     description: ''
   },
   {
-    image: 'https://i.ytimg.com/vi/ACTfLIS8_4o/sddefault.jpg',
+    image: '/images/lentejas.webp',
     alt: 'Lentejas',
     name: 'Lentejas - 6€',
     type: 'Platos Caseros',
     description: 'Lentejas caseras con chorizo '
   },
   {
-    image: '/images/popular-dishes/migas.jpg',
+    image: '/images/migas.webp',
     alt: 'Migas caseras',
     name: 'Migas caseras - 6€',
     type: 'Platos Caseros',
     description: ''
   },
   {
-    image: 'https://cdn.recetasderechupete.com/wp-content/uploads/2024/11/bacalao-con-tomate-paso-19-1200x797.jpg',
+    image: '/images/bacalaocontomate.webp',
     alt: 'Bacalao con tomate',
     name: 'Bacalao con tomate - 8€',
     type: 'Platos Caseros',
     description: ''
   },
   {
-    image: 'https://cocinaconnoelia.com/wp-content/uploads/2024/02/patatas-a-lo-pobre-500x500.webp',
+    image: '/images/patatasalopobre.webp',
     alt: 'Patatas a lo pobre',
     name: 'Patatas a lo pobre - 6€',
     type: 'Platos Caseros',
@@ -78,7 +78,7 @@ export const dishes_platos_caseros = [
     description: 'Cazuela casera con ingredientes frescos'
   },
   {
-    image: 'https://imag.bonviveur.com/huevos-rotos-con-jamon-o-huevos-estrellados.jpg',
+    image: '/images/huevospatatasyjamon.webp',
     alt: 'Huevos fritos, patatas y jamón',
     name: 'Huevos fritos, patatas y jamón - 6€',
     type: 'Platos Caseros',

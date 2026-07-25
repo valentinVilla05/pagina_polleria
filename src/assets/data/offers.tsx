@@ -16,7 +16,7 @@ export const menusSemanales = [
     }
   },
   {
-    src: 'https://www.miplato.es/tienda/1203-large_default_2x/cocido-andaluz.jpg',
+    src: '/images/cocido.webp',
     alt: 'Menú de miercoles',
     dia: 3,
     className: 'col-span-2 max-h-60',
@@ -48,7 +48,7 @@ export const menusSemanales = [
     }
   },
   {
-    src: '/images/popular-dishes/fideua.jpg',
+    src: '/images/fidedua.webp',
     alt: 'Menú de Viernes',
     dia: 5,
     className: 'col-span-2 max-h-60',
@@ -64,7 +64,7 @@ export const menusSemanales = [
     }
   },
   {
-    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnA7jpRtnYhYHBdQ9pSE4iBeS9wdeWhpccxP4ZPogZmw&s=10',
+    src: '/images/paella.webp',
     alt: 'Menú de Sabado',
     dia: 6,
     className: 'col-span-2 max-h-60',
