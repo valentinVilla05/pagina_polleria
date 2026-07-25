@@ -76,7 +76,7 @@ const CarruselPrincipal = ({ menudata }: { menudata: MenuData[] }) => {
               className='bg-foreground text-background hover:bg-foreground/90 rounded-full px-8 font-bold'
             >
               <a href='#contact-us'>
-                Pide por Whatsapp <ArrowRightIcon className='ml-2' />
+                Pedir por Whatsapp <ArrowRightIcon className='ml-2' />
               </a>
             </Button>
           </div>
