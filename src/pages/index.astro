@@ -1,6 +1,6 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import HeroSectionPage from '@/components/blocks/hero-section/hero-section'
+import CarruselPrincipal from '@/components/blocks/hero-section/carrusel-principal'
 import PopularDishes from '@/components/blocks/popular-dishes/popular-dishes'
 import Dishes from '@/components/blocks/popular-dishes/carta'
 import AboutUs from '@/components/blocks/about-us-section/about-us-page'
@@ -51,7 +51,7 @@ const schema = {
 ---
 
 <Layout title={pageTitle} description={pageDescription} keywords={pageKeywords} schema={schema}>
-  <HeroSectionPage menudata={menudata} client:load />
+  <CarruselPrincipal menudata={menudata} client:load />
   <PopularDishes popularDishes={popularDishes} client:load />
   <Dishes dishes={dishes_ensaladas} titulo='Ensaladas' client:load />
   <Dishes dishes={dishes_fritos} titulo='Fritos' client:load />

@@ -11,7 +11,7 @@ export const dishes_fritos = [
     alt: 'Cazón en adobo',
     name: 'Cazón en adobo - 8€',
     type: 'Fritos',
-    description: 'Cazón de '
+    description: 'Cazón'
   },
   {
     image:

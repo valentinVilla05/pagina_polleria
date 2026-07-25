@@ -13,7 +13,7 @@ export type MenuData = {
   imgAlt: string
 }
 
-const HeroSection = ({ menudata }: { menudata: MenuData[] }) => {
+const CarruselPrincipal = ({ menudata }: { menudata: MenuData[] }) => {
   const [mainApi, setMainApi] = useState<CarouselApi>()
   const [thumbApi, setThumbApi] = useState<CarouselApi>()
   const [current, setCurrent] = useState(0)
@@ -52,7 +52,7 @@ const HeroSection = ({ menudata }: { menudata: MenuData[] }) => {
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className='bg-background/20 flex items-center gap-2 rounded-full border border-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-md'
+                  className='bg-background/20 border-border text-foreground flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium backdrop-blur-md'
                 >
                   <item.icon className='size-4' />
                   {item.text}
@@ -60,11 +60,11 @@ const HeroSection = ({ menudata }: { menudata: MenuData[] }) => {
               ))}
             </div>
 
-            <h1 className='font-alexbrush text-6xl font-semibold whitespace-nowrap text-white sm:text-9xl'>
+            <h1 className='font-alexbrush text-foreground text-6xl font-semibold whitespace-nowrap sm:text-9xl'>
               Asadero Ronda
             </h1>
 
-            <p className='max-w-xl text-2xl text-white/80 max-lg:text-center'>Comida casera para llevar</p>
+            <p className='text-muted-foreground max-w-xl text-2xl max-lg:text-center'>Comida casera para llevar</p>
 
             {/* Cambia la clase del botón por esta configuración */}
             <Button
@@ -83,7 +83,7 @@ const HeroSection = ({ menudata }: { menudata: MenuData[] }) => {
             <CarouselContent>
               {menudata.map(item => (
                 <CarouselItem key={item.id} className='flex w-full items-center justify-center'>
-                  <img src={item.img} alt={item.imgAlt} className='marco-elegante size-72 object-contain' />
+                  <img src={item.img} alt={item.imgAlt} className='size-72 object-contain shadow-none' />
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -97,16 +97,16 @@ const HeroSection = ({ menudata }: { menudata: MenuData[] }) => {
               {menudata.map((item, index) => (
                 <CarouselItem
                   key={item.id}
-                  className='basis-1/3 cursor-pointer md:basis-1/4 lg:basis-1/6'
+                  className='flex basis-1/3 cursor-pointer justify-center md:basis-1/4 lg:basis-1/6'
                   onClick={() => handleThumbClick(index)}
                 >
                   <div
                     className={cn(
-                      'relative rounded-2xl border-2 p-2 transition-all',
-                      current === index ? 'border-accent bg-white/10' : 'border-transparent'
+                      'relative flex items-center justify-center rounded-2xl border p-2 shadow-none transition-all',
+                      current === index ? 'border-accent bg-popover/10' : 'border-transparent'
                     )}
                   >
-                    <img src={item.img} alt={item.imgAlt} className='size-20 object-contain' />
+                    <img src={item.img} alt={item.imgAlt} className='size-20 object-contain shadow-none' />
                   </div>
                 </CarouselItem>
               ))}
@@ -118,4 +118,4 @@ const HeroSection = ({ menudata }: { menudata: MenuData[] }) => {
   )
 }
 
-export default HeroSection
+export default CarruselPrincipal

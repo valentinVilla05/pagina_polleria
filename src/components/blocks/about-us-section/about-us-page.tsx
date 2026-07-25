@@ -11,7 +11,7 @@ const AboutUs = ({ stats }: { stats: Stat[] }) => {
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Header con Logo */}
         <div className='mx-auto mb-16 flex flex-col items-center text-center'>
-          <img src='/images/logo.png' alt='Logo' className='mb-6 h-24 w-auto opacity-90' />
+          <img src='/images/logo.png' alt='Logo' className='mb-6 h-24 w-auto opacity-90 shadow-none' />
           <h2 className='text-foreground font-serif text-4xl font-bold'>Nuestra Esencia</h2>
         </div>
 
@@ -20,17 +20,17 @@ const AboutUs = ({ stats }: { stats: Stat[] }) => {
           {/* Platos decorativos flotantes */}
           <img
             src='/images/hero-section/dish-01.png'
-            className='absolute top-0 -left-20 hidden size-32 rotate-[-15deg] opacity-80 lg:block'
+            className='absolute top-0 -left-20 hidden size-32 rotate-[-15deg] opacity-80 shadow-none lg:block'
             alt='Decoración'
           />
           <img
             src='/images/hero-section/dish-02.png'
-            className='absolute top-20 -right-20 hidden size-28 rotate-[10deg] opacity-80 lg:block'
+            className='absolute top-20 -right-20 hidden size-28 rotate-[10deg] opacity-80 shadow-none lg:block'
             alt='Decoración'
           />
           <img
             src='/images/hero-section/dish-03.png'
-            className='absolute bottom-10 -left-16 hidden size-24 rotate-[20deg] opacity-80 lg:block'
+            className='absolute bottom-10 -left-16 hidden size-24 rotate-[20deg] opacity-80 shadow-none lg:block'
             alt='Decoración'
           />
 

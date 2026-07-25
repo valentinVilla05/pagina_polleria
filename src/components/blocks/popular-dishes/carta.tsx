@@ -51,6 +51,7 @@ const Dishes = ({ dishes, titulo }: { dishes: Dish; titulo: string }) => {
   const ultima_pagina = Math.max(0, paginas.length - 1)
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setPagina(current => Math.min(current, ultima_pagina))
   }, [ultima_pagina])
 
@@ -69,12 +70,12 @@ const Dishes = ({ dishes, titulo }: { dishes: Dish; titulo: string }) => {
         />
         {/* Platos decorativos difuminados en las esquinas */}
         <img
-          src='/images/hero-section/dish-01.webp'
+          src='/images/hero-section/dish-01.png'
           alt='Decoración Plato 1'
           className='absolute top-20 right-[-5%] h-72 w-72 rounded-full object-cover opacity-10 blur-sm'
         />
         <img
-          src='/images/hero-section/dish-03.webp'
+          src='/images/hero-section/dish-03.png'
           alt='Decoración Plato 3'
           className='absolute bottom-10 left-[-5%] h-60 w-60 rotate-45 transform rounded-full object-cover opacity-10 blur-sm'
         />
@@ -126,11 +127,11 @@ const Dishes = ({ dishes, titulo }: { dishes: Dish; titulo: string }) => {
                             {member.name}
                           </CardTitle>
                           <Separator className='bg-[oklch(0.74_0.15_65)]/20' />
-                          <div className='flex-grow text-[oklch(0.25_0.1_22)]/80'>
-                            <p className='mb-2 text-sm font-medium tracking-wide text-[oklch(0.25_0.1_22)] uppercase'>
+                          <div className='flex-grow text-[oklch(0.18_0.08_22)]'>
+                            <p className='mb-2 text-sm font-medium tracking-wide text-[oklch(0.18_0.08_22)] uppercase'>
                               {member.type}
                             </p>
-                            <p className='text-sm leading-relaxed opacity-90'>{member.description}</p>
+                            <p className='text-sm leading-relaxed font-medium'>{member.description}</p>
                           </div>
                         </div>
                       </CardContent>

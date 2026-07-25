@@ -42,7 +42,7 @@ export const dishes_platos_caseros = [
     description: ''
   },
   {
-    image: '/images/popular-dishes/lentejas.jpg',
+    image: 'https://i.ytimg.com/vi/ACTfLIS8_4o/sddefault.jpg',
     alt: 'Lentejas',
     name: 'Lentejas - 6€',
     type: 'Platos Caseros',

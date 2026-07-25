@@ -53,7 +53,7 @@ export const dishes_extras = [
     description: 'Rollo de primavera con verdura'
   },
   {
-    image: 'https://www.melonsinjamon.com/wp-content/uploads/2022/04/receta-cuscus-rapido.jpg',
+    image: '/images/cuscus.jpg',
     alt: 'Cuscús',
     name: 'Cuscús - 9,50€/persona',
     type: 'Extras',
