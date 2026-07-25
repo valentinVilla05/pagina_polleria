@@ -33,7 +33,7 @@ export const dishes_extras = [
     alt: 'Salsas: Alioli / Brava',
     name: 'Salsas: Alioli - 1,50€, Brava - 1,50€',
     type: 'Extras',
-    description: 'Salsa alioli y salsa brava'
+    description: 'Salsas caseras'
   },
   {
     image: '/images/empanadillas.webp',
@@ -47,7 +47,7 @@ export const dishes_extras = [
     alt: 'Rollo de primavera',
     name: 'Rollo de primavera (2 uds.) - 3€',
     type: 'Extras',
-    description: 'Rollo de primavera con verdura'
+    description: 'Rollo de primavera caseros'
   },
   {
     image: '/images/cuscus.jpg',

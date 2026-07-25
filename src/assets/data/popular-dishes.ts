@@ -16,7 +16,7 @@ export const popularDishes = [
     crossorigin: 'anonymous'
   },
   {
-    image: '/images/pollo_y_medio.png',
+    image: '/images/pollo3.webp',
     alt: 'Menú Pollo y medio',
     name: 'Menú Pollo y medio - 24€',
     type: 'Menú de pollo ',
@@ -24,7 +24,7 @@ export const popularDishes = [
     crossorigin: 'anonymous'
   },
   {
-    image: '/images/pollo2.jpg',
+    image: '/images/pollo3.webp',
     alt: 'Menú Pollo Doble',
     name: 'Menú Pollo Doble - 31.50€',
     type: 'Menú de pollo',

@@ -25,7 +25,7 @@ export const dishes_platos_caseros = [
     alt: 'Fideuá',
     name: 'Fideuá - 6,50€',
     type: 'Platos Caseros',
-    description: 'Fideuá tradicional de la casa'
+    description: ''
   },
   {
     image: '/images/macarrones.webp',

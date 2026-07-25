@@ -43,7 +43,7 @@ export const dishes_ensaladas = [
     description: ''
   },
   {
-    image: '/images/popular-dishes/ensalada_de_arroz.jpg',
+    image: '/images/ensaladadearroz.webp',
     alt: 'Ensalada de arroz',
     name: 'Ensalada de arroz - 6€',
     type: 'Ensalada',
