@@ -48,5 +48,12 @@ export const dishes_ensaladas = [
     name: 'Ensalada de arroz - 6€',
     type: 'Ensalada',
     description: ''
+  },
+  {
+    image: '/images/ensaladaPasta.jpeg',
+    alt: 'Ensalada de pasta',
+    name: 'Ensalada de pasta - 5.50€',
+    type: 'Ensalada',
+    description: 'Ensalada de pasta'
   }
 ]

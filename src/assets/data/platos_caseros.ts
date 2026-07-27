@@ -83,5 +83,47 @@ export const dishes_platos_caseros = [
     name: 'Huevos fritos, patatas y jamón - 6€',
     type: 'Platos Caseros',
     description: 'Huevos fritos con patatas y jamón'
+  },
+  {
+    image: '/images/pistoHuevos.jpeg',
+    alt: 'Pisto con huevos',
+    name: 'Pisto con huevos - 6€',
+    type: 'Platos Caseros',
+    description: 'Pisto con huevos'
+  },
+  {
+    image: '/images/salmorejo.jpeg',
+    alt: 'Salmorejo',
+    name: 'Salmorejo - 6€',
+    type: 'Platos Caseros',
+    description: 'Salmorejo'
+  },
+  {
+    image: '/images/champiñones.jpeg',
+    alt: 'Champiñones',
+    name: 'Champiñones - 6€',
+    type: 'Platos Caseros',
+    description: 'Champiñones'
+  },
+  {
+    image: '/images/hero-section/dish-02.png',
+    alt: 'Patatas con alioli',
+    name: 'Patatas con alioli - 4.50€',
+    type: 'Platos Caseros',
+    description: 'Patatas con alioli'
+  },
+  {
+    image: '/images/habasJamon.jpeg',
+    alt: 'Habas con jamon',
+    name: 'Habas con jamón - 6€',
+    type: 'Platos Caseros',
+    description: 'Habas con jamón'
+  },
+  {
+    image: '/images/estofado.jpeg',
+    alt: 'Estofado',
+    name: 'Estofado - 6.50€',
+    type: 'Platos Caseros',
+    description: 'Estofado'
   }
 ]
