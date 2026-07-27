@@ -1,6 +1,6 @@
 export const menusSemanales = [
   {
-    src: '/images/popular-dishes/macarrones.jpg',
+    src: '/images/macarrones.webp',
     alt: 'Menú del martes',
     dia: 2,
     className: 'col-span-2 row-span-2',
