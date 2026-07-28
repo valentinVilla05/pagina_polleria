@@ -1,6 +1,6 @@
 export const dishes_extras = [
   {
-    image: '/images/hero-section/dish-05.png',
+    image: '/images/patatas.png',
     alt: 'Patatas',
     name: 'Patatas (ración) - 4,50€ - ½ ración - 3,50€',
     type: 'Extras',

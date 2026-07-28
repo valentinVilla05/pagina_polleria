@@ -28,7 +28,7 @@ export const dishes_fritos = [
     description: 'Flamenquines de la casa'
   },
   {
-    image: '/images/hero-section/dish-04.png',
+    image: '/images/croquetas.webp',
     alt: 'Croquetas caseras de pollo',
     name: 'Croquetas caseras de pollo (8uds) - 6.50€',
     type: 'Fritos',
